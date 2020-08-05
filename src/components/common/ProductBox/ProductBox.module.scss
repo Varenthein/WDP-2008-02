@@ -75,4 +75,18 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .oldPrice {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 45%;
+      left: 5%;
+      width: 90%;
+      border-bottom: 3px solid #ff0000;
+      transform: rotate(-15deg);
+    }
+  }
 }
