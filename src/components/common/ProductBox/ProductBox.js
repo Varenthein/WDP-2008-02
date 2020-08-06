@@ -46,14 +46,8 @@ const ProductBox = ({ name, price, promo, stars, oldPrice }) => (
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
-      {oldPrice ? (
-        <Button noHover variant='small' className={styles.oldPrice}>
-          $ {oldPrice}
-        </Button>
-      ) : (
-        ''
-      )}
       <div className={styles.price}>
+        {oldPrice ? <div className={styles.oldPrice}>$ {oldPrice}</div> : ''}
         <Button noHover variant='small'>
           $ {price}
         </Button>
