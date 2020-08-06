@@ -31,7 +31,9 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      opacity: 0;
     }
+  
   }
 
   .content {
@@ -74,5 +76,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &:hover{
+    .buttons{
+      opacity: 1;
+    }
+
+    .price :first-child{
+      background-color: #d58e32;
+     } 
   }
 }
