@@ -40,3 +40,53 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .root {
+    
+    .topOptions {
+      display: flex;
+      flex: 7;
+    }
+
+    .topMenu {
+      display: flex;
+      flex: 5;
+      
+      ul li {
+        margin-left: 1.3rem;
+      }
+    }
+
+    .topOptions, .topMenu {
+      padding: 0;
+    }
+
+    .topOptions ul li {
+      margin-right: 0.1rem;
+  
+      .icon {
+        margin-left: 0;
+      }
+    }
+  
+    .topMenu ul li a a { 
+      display: none;     
+    }
+  }
+}
+
+@media (min-width:768px) {
+  .root {
+    
+    .topOptions {
+      display: flex;
+      flex: 6;
+    }
+
+    .topMenu {
+      display: flex;
+      flex: 6;
+    }
+  }
+}
