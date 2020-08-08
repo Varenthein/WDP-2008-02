@@ -28,7 +28,7 @@
 
   .category:hover {
     background-color: $primary;
-    color: #ffff;
+    color: $hover-content-color;
 
     .icon:first-child {
       color: inherit;
@@ -53,7 +53,7 @@
        
         &:hover {
           background-color: $primary;
-          color: #ffff;
+          color: $hover-content-color;
           padding-left: 80px;
           background-position: 0 100%;
         }
@@ -73,7 +73,7 @@
     position: absolute;
     height: 0;
     border: none;
-    background-color: #ffff;
+    background-color: $hover-content-color;
     cursor: pointer;
     transition: all .4s ease;
 
@@ -82,7 +82,7 @@
       width: 100%;
       height: 0;
       padding: 0;
-      color:#ffff;
+      color: $hover-content-color;
       text-decoration: none;
       background-position: 100% 0;
       background-size: 300%;
