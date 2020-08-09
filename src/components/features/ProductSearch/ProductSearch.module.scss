@@ -12,6 +12,19 @@
     align-items: center;
     position: relative;
 
+    &:hover {
+      background-color: $primary;
+      color: #ffff;
+
+      .icon:first-child {
+        color: inherit;
+      }
+
+      select {
+        color: inherit;
+      }
+    }
+
     .icon:first-child {
       color: $primary;
       position: absolute;
