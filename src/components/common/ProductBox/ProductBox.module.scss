@@ -88,18 +88,21 @@
     align-items: center;
   }
 
-  &:hover{
-    .buttons{
+  &:hover {
+    .buttons {
       opacity: 1;
     }
-    .price:first-child{
-      background-color: $primary;
-     } 
 
-  .price {
-    display: flex;
-    align-items: center;
+    .price:first-child {
+      background-color: $primary;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+    }
   }
+}
 
   .oldPrice {
     color: #808080;
@@ -109,4 +112,3 @@
     font-size: 14px;
 
   }
-}

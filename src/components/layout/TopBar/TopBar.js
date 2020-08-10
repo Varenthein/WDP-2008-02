@@ -1,4 +1,7 @@
 import React from 'react';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+
 // import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,7 +13,7 @@ const TopBar = () => (
   <div className={styles.root}>
     <div className='container'>
       <div className='row'>
-        <div className={`col text-left ${styles.topOptions}`}>
+        <div className={`col-9 text-left ${styles.topOptions}`}>
           <ul>
             <li>
               <a href='#'>
@@ -29,7 +32,7 @@ const TopBar = () => (
             </li>
           </ul>
         </div>
-        <div className={`col text-right ${styles.topMenu}`}>
+        <div className={`col-3 text-right d-none d-md-block ${styles.topMenu}`}>
           <ul>
             <li>
               <a href='#'>
@@ -47,6 +50,16 @@ const TopBar = () => (
               </a>
             </li>
           </ul>
+        </div>
+        <div className={`col-3 text-right d-sm-block d-md-none ${styles.topMenu}`}>
+          <DropdownButton id='dropdown-basic-button' className='navbar-toggler'>
+            <Dropdown.Item href='#'>
+              <FontAwesomeIcon className={styles.icon} icon={faLock} /> Register
+            </Dropdown.Item>
+            <Dropdown.Item href='#'>
+              <FontAwesomeIcon className={styles.icon} icon={faUser} /> Login
+            </Dropdown.Item>
+          </DropdownButton>
         </div>
       </div>
     </div>
