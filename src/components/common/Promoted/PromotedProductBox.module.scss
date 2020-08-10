@@ -3,7 +3,7 @@
 .root {
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 
   .photo {
     position: relative;
@@ -17,23 +17,40 @@
     overflow: hidden;
     align-items: flex-end;
 
-    .sale {
+    .hotDeals {
       position: absolute;
-      top: -30px;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 0;     
       background-color: #292929;
-      border-radius: 50%;
       color: #ffffff;
-      padding: 30px 15px 5px 15px;
-    }
+      padding: 5px 15px 5px 15px;
+      min-width: 95%;
+      max-height: 32px;
+      display: inline;
 
-    .buttons {
-      display: flex;
-      justify-content: space-between;
-      opacity: 0;
-    }
+      .dots {
+        color: $primary;
+        text-align: end;
+        
+        a {          
+          display: inline-block;
+          width: 13px;
+          height: 13px;
+          border-radius: 6px;
+          background-color: #e1e1e1; 
+          font-size: 0;    
+          margin: -20px 4px 40px 4px;     
+          
+          &.active,
+            &:hover {
+              background-color: $primary;
+            }
+        }  
+      }
 
+      .buttons, .circles {
+        opacity: 0;
+      }
+    }
 
     .image {
       position: absolute;
@@ -44,6 +61,40 @@
       object-fit: cover;
     }
 
+    &:hover {
+      .buttons {
+        opacity: 1;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin-top: 48px;
+      }
+
+      .circles {
+        margin-left: 24px;
+        opacity: 1;
+  
+        .circle {
+          display: inline-flex;
+          margin: 96px 2px 0 2px;
+          width: 64px;
+          height: 64px;
+          border-radius: 50px;
+          background-color: $form-border-color; 
+          color: $hover-content-color;
+  
+          .circleText {
+            display: inline-block; 
+            margin: auto;
+  
+            h5 {
+              margin: 4px 0 0 6px;
+            }
+          }
+        }
+      }
+    }
   }
 
   .content {
