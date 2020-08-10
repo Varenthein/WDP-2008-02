@@ -81,7 +81,11 @@ const MenuBar = ({ children }) => (
           <ProductSearch />
         </div>
         <div className='col-3'>
-          <DropdownButton id='dropdown-basic-button' className='navbar-toggler'>
+          <DropdownButton
+            id='dropdown-basic-button'
+            className='navbar-toggler'
+            title=''
+          >
             <Dropdown.Item href='#'>Furniture</Dropdown.Item>
             <Dropdown.Item href='#'>Chair</Dropdown.Item>
             <Dropdown.Item href='#'>Table</Dropdown.Item>
