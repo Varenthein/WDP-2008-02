@@ -47,6 +47,10 @@
     .topOptions {
       display: flex;
       flex: 8;
+      
+      ul li {
+        margin-left: 12px;
+      }
     }
 
     .topMenu {
