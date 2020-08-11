@@ -1,15 +1,25 @@
 $base-padding: 24px;
 
-$header-topbar-bg: #434343;
-$header-bg: #363636;
+/* THESE VARIABLES ARE ONLY IN THIS FILE. THEY CANNOT BE USED IN THE PROJECT. */
 
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
+$charcoal: #434343;
+$veryDarkGray: #363636;
+$darkGray: #2a2a2a;
+$fuelYellow: #d58e32;
+$black: #292929;
+$white: #fff;
 
-$primary: #d58e32;
+/* THESE VARIABLES CAN BE USED IN THE PROJECT. */
 
-$text-color: #2a2a2a;
+$header-topbar-bg: $charcoal;
+$header-bg: $veryDarkGray;
 
-$form-border-color: #292929;
+$footer-claim-bg: $darkGray;
+$footer-bg: $veryDarkGray;
 
-$hover-content-color: #ffff;
+$primary: $fuelYellow;
+
+$text-color: $darkGray;
+
+$form-border-color: $black;
+$hover-content-color: $white;
