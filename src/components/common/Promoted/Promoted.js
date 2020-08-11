@@ -16,29 +16,18 @@ class Promoted extends React.Component {
     activeCategory: 'bed',
   };
 
-  handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
-  }
-
-  handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
-  }
-
   render() {
     const { products } = this.props;
-    const { activeCategory, activePage } = this.state;
-
+    const { activeCategory } = this.state;
     const categoryProducts = products.filter(item => item.category === activeCategory);
 
     return (
       <div className={styles.root}>
         <div className='container'>
           <div className='row'>
-            {categoryProducts.slice(activePage, activePage + 1).map(item => (
-              <Col xs={12} md={6} lg={4} key={item.id}>
-                <PromotedProductBox {...item} />
-              </Col>
-            ))}
+            <Col xs={12} md={6} lg={4} key={categoryProducts[0].id}>
+              <PromotedProductBox {...categoryProducts[0]} />
+            </Col>
             <Col lg={8} className={styles.rightSide}>
               <div className={styles.rightSidePhoto}>
                 <img src='images/furniture/furniture-6.jpeg' alt='promotedExample' />
