@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import { Col } from 'react-flexbox-grid';
 import styles from './Promoted.module.scss';
 import PromotedProductBox from './PromotedProductBox.js';
+import Button from '../Button/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faArrowAltCircleRight,
+  faArrowAltCircleLeft,
+} from '@fortawesome/free-solid-svg-icons';
 
 class Promoted extends React.Component {
   state = {
@@ -23,21 +29,6 @@ class Promoted extends React.Component {
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
-
-    const dots = [];
-    for (let i = 0; i < pagesCount; i++) {
-      dots.push(
-        <li>
-          <a
-            onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
-          >
-            page {i}
-          </a>
-        </li>
-      );
-    }
 
     return (
       <div className={styles.root}>
@@ -48,6 +39,40 @@ class Promoted extends React.Component {
                 <PromotedProductBox {...item} />
               </Col>
             ))}
+            <Col lg={8} className={styles.rightSide}>
+              <div className={styles.rightSidePhoto}>
+                <img src='images/furniture/furniture-6.jpeg' alt='promotedExample' />
+                <div className={styles.rightSideStripe}>
+                  <div className={styles.rightSideStripeTextBig}>
+                    INDOOR <b>FURNITURE</b>
+                  </div>
+                  <div className={styles.rightSideStripeTextSmall}>
+                    SAVE UP TO 50% OF ALL FURNITURE
+                  </div>
+                </div>
+              </div>
+              <div className={styles.buttonShop}>
+                <Button className={styles.buttonShopNow} variant='outline'>
+                  SHOP NOW
+                </Button>
+              </div>
+              <div className={styles.arrows}>
+                <div className={styles.arrow}>
+                  <div className={styles.arrowShadow}></div>
+                  <FontAwesomeIcon
+                    icon={faArrowAltCircleLeft}
+                    className={styles.leftArrow}
+                  ></FontAwesomeIcon>
+                </div>
+                <div className={styles.arrow}>
+                  <div className={styles.arrowShadow}></div>
+                  <FontAwesomeIcon
+                    icon={faArrowAltCircleRight}
+                    className={styles.rightArrow}
+                  ></FontAwesomeIcon>
+                </div>
+              </div>
+            </Col>
           </div>
         </div>
       </div>

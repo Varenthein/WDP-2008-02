@@ -12,7 +12,6 @@ const initialState = {
       name: 'Aenean Ru Bristique 1',
       image: '/images/furniture/furniture-1.jpeg',
       category: 'bed',
-      //image: 'https://i.postimg.cc/HL4mFXMs/pexels-photo-775219.jpg',
       price: 30,
       stars: 2,
       promo: 'sale',
