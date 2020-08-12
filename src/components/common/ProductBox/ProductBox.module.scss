@@ -88,26 +88,26 @@
     align-items: center;
   }
 
+  .price {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+
+  .oldPrice {
+    color: #808080;
+    text-decoration: line-through;
+    text-decoration-color:#000;
+    padding: 8px;
+    font-size: 14px;
+  }
+
   &:hover{
     .buttons{
       opacity: 1;
     }
     .price:first-child{
       background-color: $primary;
-     } 
-
-    .price {
-      display: flex;
-      align-items: center;
-    }
-
-    .oldPrice {
-      color: #808080;
-      text-decoration: line-through;
-      text-decoration-color:#000;
-      padding: 8px;
-      font-size: 14px;
-
-    }
+    } 
   }
 }
