@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
@@ -36,10 +35,6 @@ const StarRating = () => {
       })}
     </div>
   );
-};
-
-StarRating.propTypes = {
-  stars: PropTypes.number,
 };
 
 export default StarRating;

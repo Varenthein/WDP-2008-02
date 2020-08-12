@@ -44,10 +44,10 @@ const ProductBox = ({
         </Button>
       </div>
       <div className={styles.price}>
-        {oldPrice ? <div className={styles.oldPrice}>$ {oldPrice}</div> : ''}
         <Button noHover variant='small'>
           $ {price}
         </Button>
+        {oldPrice ? <div className={styles.oldPrice}>$ {oldPrice}</div> : ''}
       </div>
     </div>
   </div>

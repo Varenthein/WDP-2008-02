@@ -92,17 +92,10 @@
     align-items: center;
   }
 
-  &:hover{
-    .buttons{
-      opacity: 1;
-    }
-    .price:first-child{
-      background-color: $primary;
-     } 
-
   .price {
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
   }
 
   .oldPrice {
@@ -112,5 +105,13 @@
     padding: 8px;
     font-size: 14px;
   }
+
+  &:hover{
+    .buttons{
+      opacity: 1;
+    }
+    .price:first-child{
+      background-color: $primary;
+    } 
   }
 }
