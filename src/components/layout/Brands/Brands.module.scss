@@ -1,0 +1,14 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: 5rem 0;
+  .brandsImages {
+    background-color: yellowgreen;
+    align-items: center;
+  }
+  .brandLogoImage {
+    border: 1px solid $header-topbar-bg;
+    margin: 0 8px;
+  }
+  
+}
