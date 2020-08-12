@@ -6,6 +6,14 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+  feedback: [
+    {
+      title: 'Client feedback',
+      opinion: 'Some text here',
+      client_name: 'John Smith',
+      client_type: 'Furniture client',
+    },
+  ],
   products: [
     {
       id: 'aenean-ru-bristique-1',
