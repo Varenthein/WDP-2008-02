@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Brands.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faArrowAltCircleRight,
+  faArrowAltCircleLeft,
+} from '@fortawesome/free-solid-svg-icons';
 
 class Brands extends React.Component {
   render() {
@@ -11,6 +16,13 @@ class Brands extends React.Component {
         <div className='container'>
           <div className='col'>
             <div className={styles.brandsRow}>
+              <div className={styles.arrowLeft}>
+                <div className={styles.arrowShadow}></div>
+                <FontAwesomeIcon
+                  icon={faArrowAltCircleLeft}
+                  className={styles.leftArrow}
+                ></FontAwesomeIcon>
+              </div>
               <div className={styles.brandsImages}>
                 {brands.map(brand => (
                   <img
@@ -20,6 +32,13 @@ class Brands extends React.Component {
                     className={styles.brandLogoImage}
                   />
                 ))}
+              </div>
+              <div className={styles.arrowRight}>
+                <div className={styles.arrowShadow}></div>
+                <FontAwesomeIcon
+                  icon={faArrowAltCircleRight}
+                  className={styles.rightArrow}
+                ></FontAwesomeIcon>
               </div>
             </div>
           </div>
