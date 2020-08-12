@@ -13,29 +13,12 @@ import Button from '../Button/Button';
 
 class ProductBox extends React.Component {
   state = {
-    favorite: false,
+    favorite: this.props.favorite,
   };
 
   handelFavorite(value) {
-    this.setState({ favorite: value }); //this.setState({favorite: value });
+    this.setState({ favorite: value });
   }
-
-  //componentDidUpdate(prevProps, prevState) {
-  //  if(prevState.favorite !== this.state.favorite) {
-  //    this.setState({favorite: this.state.favorite});
-  //  }
-  //}
-
-  //componentDidMount(){
-  //  const updatedSearchString = this.props.match.params.searchString;
-  //  this.props.changeSearchString(updatedSearchString);
-  //}
-  //
-  //componentDidUpdate(previousProps) {
-  //  if (previousProps.searchString != this.props.match.params.searchString) {
-  //    this.props.changeSearchString(this.props.match.params.searchString);
-  //  }
-  //}
 
   render() {
     const { name, price, promo, stars, image, oldPrice, compare } = this.props;
@@ -71,7 +54,7 @@ class ProductBox extends React.Component {
         <div className={styles.actions}>
           <div className={styles.outlines}>
             <Button
-              onClick={() => this.handelFavorite(favorite === false ? true : false)}
+              onClick={() => this.handelFavorite(!favorite)}
               variant={favorite ? 'active' : 'outline'}
             >
               <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
