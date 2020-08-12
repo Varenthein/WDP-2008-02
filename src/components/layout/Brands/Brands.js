@@ -10,8 +10,8 @@ class Brands extends React.Component {
       <div className={styles.root}>
         <div className='container'>
           <div className='col'>
-            <div className={styles.brandsImages}>
-              <div>
+            <div className={styles.brandsRow}>
+              <div className={styles.brandsImages}>
                 {brands.map(brand => (
                   <img
                     key={brand.brandLogoImage}
