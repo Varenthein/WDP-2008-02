@@ -9,7 +9,10 @@ const initialState = {
   feedback: [
     {
       title: 'Client feedback',
-      opinion: 'Some text here',
+      sign: '"',
+      opinion:
+        'Some text here Some text here  Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here',
+      client_image: '/images/john-smith.jpg',
       client_name: 'John Smith',
       client_type: 'Furniture client',
     },
