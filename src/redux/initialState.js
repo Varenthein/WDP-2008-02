@@ -6,6 +6,26 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+  brands: [
+    {
+      brandLogoImage: '/images/brands-logo/brand-logo-1.jpg',
+    },
+    {
+      brandLogoImage: '/images/brands-logo/brand-logo-2.jpg',
+    },
+    {
+      brandLogoImage: '/images/brands-logo/brand-logo-3.jpg',
+    },
+    {
+      brandLogoImage: '/images/brands-logo/brand-logo-4.jpg',
+    },
+    {
+      brandLogoImage: '/images/brands-logo/brand-logo-5.jpg',
+    },
+    {
+      brandLogoImage: '/images/brands-logo/brand-logo-6.jpg',
+    },
+  ],
   products: [
     {
       id: 'aenean-ru-bristique-1',
