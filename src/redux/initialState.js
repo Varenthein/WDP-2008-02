@@ -35,6 +35,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
       favorite: true,
       compare: false,
@@ -48,6 +49,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
       favorite: false,
       compare: false,
@@ -60,6 +62,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
       favorite: false,
       compare: true,
@@ -73,6 +76,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
       favorite: true,
       compare: true,
@@ -85,6 +89,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -95,6 +100,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -106,6 +112,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -116,6 +123,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -126,6 +134,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -136,6 +145,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -147,6 +157,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -158,6 +169,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -168,6 +180,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -178,6 +191,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -189,6 +203,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -200,6 +215,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -211,6 +227,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -222,6 +239,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -232,6 +250,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -242,6 +261,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -252,6 +272,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -263,6 +284,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -273,6 +295,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -284,6 +307,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
   ],
