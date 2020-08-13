@@ -25,10 +25,16 @@ class Promoted extends React.Component {
       <div className={styles.root}>
         <div className='container'>
           <div className='row'>
-            <Col xs={12} md={6} lg={4} key={categoryProducts[0].id}>
+            <Col
+              xs={12}
+              md={6}
+              lg={4}
+              key={categoryProducts[0].id}
+              className='d-none d-md-block'
+            >
               <PromotedProductBox {...categoryProducts[0]} />
             </Col>
-            <Col lg={8} className={styles.rightSide}>
+            <Col xs={12} md={6} lg={8} className={styles.rightSide}>
               <div className={styles.rightSidePhoto}>
                 <img src='images/furniture/furniture-6.jpeg' alt='promotedExample' />
                 <div className={styles.rightSideStripe}>

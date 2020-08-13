@@ -3,10 +3,10 @@
 .rightSide {
     margin: 2rem 0;
     position: relative;
-    
-    
+
+
     .rightSidePhoto {
-        
+
         img {
             position: absolute;
             top: 0;
@@ -21,7 +21,7 @@
             background-color: $form-border-color;
             opacity: 0.7;
             padding: 40px 0;
-            margin-top: 148px;  
+            margin-top: 148px;
             color: white;
             text-align: center;
 
@@ -70,7 +70,7 @@
         position: relative;
         display: inline-flex;
         background-color: $form-border-color;
-        width: 386px;
+        width: 27vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -83,4 +83,28 @@
         margin-left: -14px;
         margin-top: 1px;
     }
+}
+
+@media (max-width: 425px) {
+  .rightSide {
+    .arrow {
+      width: 48vw;
+    }
+  }
+}
+
+@media (min-width: 426px ) and (max-width: 768px) {
+  .rightSide {
+    .arrow {
+      width: 23.5vw;
+    }
+  }
+}
+
+@media (min-width: 769px ) and (max-width: 1024px) {
+  .rightSide {
+    .arrow {
+      width: 31vw;
+    }
+  }
 }
