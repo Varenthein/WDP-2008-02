@@ -16,7 +16,8 @@ class ProductBox extends React.Component {
     favorite: this.props.favorite,
   };
 
-  handelFavorite(value) {
+  handelFavorite(value, e) {
+    e.preventDefault();
     this.setState({ favorite: value });
   }
 
@@ -54,7 +55,7 @@ class ProductBox extends React.Component {
         <div className={styles.actions}>
           <div className={styles.outlines}>
             <Button
-              onClick={() => this.handelFavorite(!favorite)}
+              onClick={event => this.handelFavorite(!favorite, event)}
               variant={favorite ? 'active' : 'outline'}
             >
               <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
