@@ -19,7 +19,10 @@ const ProductBox = ({
   image,
   oldPrice,
   favorite,
+  id,
   compare,
+  addToCompare,
+  countProductToCompare,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -52,7 +55,15 @@ const ProductBox = ({
         <Button variant={favorite ? 'active' : 'outline'}>
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button variant={compare ? 'active' : 'outline'}>
+        <Button
+          variant={compare ? 'active' : 'outline'}
+          onClick={event => {
+            event.preventDefault();
+            if (countProductToCompare() < 4) {
+              addToCompare(id);
+            }
+          }}
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -76,6 +87,9 @@ ProductBox.propTypes = {
   compare: PropTypes.bool,
   oldPrice: PropTypes.number,
   image: PropTypes.string,
+  id: PropTypes.string,
+  addToCompare: PropTypes.func,
+  countProductToCompare: PropTypes.func,
 };
 
 export default ProductBox;
