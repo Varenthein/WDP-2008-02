@@ -57,10 +57,14 @@
       letter-spacing: 1px;
     }
 
+    input[type="radio"] {
+      display: none;
+    }
+
     .stars {
       a {
         text-decoration: none;
-        color: rgb(42, 42, 42);
+        cursor: pointer;
       }
     }
   }
