@@ -6,7 +6,7 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
-  feedback: [
+  feedbacks: [
     {
       title: 'Client feedback',
       sign: '"',

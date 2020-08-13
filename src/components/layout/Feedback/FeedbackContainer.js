@@ -3,7 +3,7 @@ import Feedback from './Feedback';
 import { getAll } from '../../../redux/feedbackRedux.js';
 
 const mapStateToProps = state => ({
-  feedback: getAll(state),
+  feedbacks: getAll(state),
 });
 
 export default connect(mapStateToProps)(Feedback);

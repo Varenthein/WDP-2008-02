@@ -4,7 +4,7 @@ import styles from './Feedback.module.scss';
 
 class Feedback extends React.Component {
   render() {
-    const { feedback } = this.props;
+    const { feedbacks } = this.props;
 
     return (
       <div className={styles.root}>
@@ -12,9 +12,9 @@ class Feedback extends React.Component {
           <div className={styles.panelBar}>
             <div className='row no-gutters align-items-end'>
               <div className={'col-auto ' + styles.heading}>
-                {feedback.map(feedbacks => (
-                  <div key={feedbacks.title} className={styles.title}>
-                    {feedbacks.title}
+                {feedbacks.map(feedback => (
+                  <div key={feedback.title} className={styles.title}>
+                    {feedback.title}
                   </div>
                 ))}
               </div>
@@ -33,21 +33,21 @@ class Feedback extends React.Component {
           </div>
           <div className={styles.content}>
             <div className={styles.sign}>
-              {feedback.map(feedbacks => (
-                <div key={feedbacks.sign}>{feedbacks.sign}</div>
+              {feedbacks.map(feedback => (
+                <div key={feedback.sign}>{feedback.sign}</div>
               ))}
             </div>
             <div className={styles.opinion}>
-              {feedback.map(feedbacks => (
-                <div key={feedbacks.opinion}>{feedbacks.opinion}</div>
+              {feedbacks.map(feedback => (
+                <div key={feedback.opinion}>{feedback.opinion}</div>
               ))}
             </div>
             <div className={styles.clientsData}>
               <div>
-                {feedback.map(feedbacks => (
+                {feedbacks.map(feedback => (
                   <img
-                    key={feedbacks.client_image}
-                    src={feedbacks.client_image}
+                    key={feedback.client_image}
+                    src={feedback.client_image}
                     alt={'client_image'}
                     className={styles.client_image}
                   />
@@ -55,13 +55,13 @@ class Feedback extends React.Component {
               </div>
               <div className={styles.client_nameAndType}>
                 <div className={styles.client_name}>
-                  {feedback.map(feedbacks => (
-                    <div key={feedbacks.client_name}>{feedbacks.client_name}</div>
+                  {feedbacks.map(feedback => (
+                    <div key={feedback.client_name}>{feedback.client_name}</div>
                   ))}
                 </div>
                 <div className={styles.client_type}>
-                  {feedback.map(feedbacks => (
-                    <div key={feedbacks.client_type}>{feedbacks.client_type}</div>
+                  {feedbacks.map(feedback => (
+                    <div key={feedback.client_type}>{feedback.client_type}</div>
                   ))}
                 </div>
               </div>
@@ -74,7 +74,7 @@ class Feedback extends React.Component {
 }
 
 Feedback.propTypes = {
-  feedback: PropTypes.arrayOf(
+  feedbacks: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
       sign: PropTypes.string,

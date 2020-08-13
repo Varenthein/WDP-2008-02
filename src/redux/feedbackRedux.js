@@ -1,6 +1,6 @@
 /* selectors */
-export const getAll = ({ feedback }) => feedback;
-export const getCount = ({ feedback }) => feedback.length;
+export const getAll = ({ feedbacks }) => feedbacks;
+export const getCount = ({ feedbacks }) => feedbacks.length;
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {

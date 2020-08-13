@@ -11,7 +11,7 @@ const reducers = {
   cart: cartReducer,
   categories: categoriesReducer,
   products: productsReducer,
-  feedback: feedbackReducer,
+  feedbacks: feedbackReducer,
 };
 
 // add blank reducers for initial state properties without reducers
