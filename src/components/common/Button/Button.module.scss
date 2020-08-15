@@ -69,3 +69,11 @@
   line-height: 22px;
   background-color: $primary;
 }
+
+.gallery{
+  @extend .outline;
+  border: 1px solid $gallery-color;
+  border-radius: 5px;
+  background-color: $gallery-color;
+  padding: 10px 30px;
+}
