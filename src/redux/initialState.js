@@ -6,6 +6,15 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+  feedbacks: [
+    {
+      title: 'Client feedback',
+      sign: '"',
+      opinion:
+        'Some text here Some text here  Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here',
+      client_image: '/images/john-smith.jpg',
+      client_name: 'John Smith',
+      client_type: 'Furniture client',
   brands: [
     {
       brandLogoImage: '/images/brands-logo/brand-logo-1.jpg',
