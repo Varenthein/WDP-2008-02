@@ -1,0 +1,163 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  margin: 2rem 0;
+
+  .photo {
+    position: relative;
+    padding: 80% 10px 0 10px;
+    background: {
+      color: #f4f5f7;
+      size: contain;
+      position: center;
+      repeat: no-repeat;
+    }
+    overflow: hidden;
+    align-items: flex-end;
+
+    .hotDeals {
+      position: absolute;
+      top: 0;     
+      background-color: #292929;
+      color: #ffffff;
+      padding: 5px 15px 5px 15px;
+      min-width: 95%;
+      max-height: 32px;
+      display: inline;
+
+      .dots {
+        color: $primary;
+        text-align: end;
+        
+        a {          
+          display: inline-block;
+          width: 13px;
+          height: 13px;
+          border-radius: 6px;
+          background-color: #e1e1e1; 
+          font-size: 0;    
+          margin: -20px 4px 40px 4px;     
+          
+          &.active,
+            &:hover {
+              background-color: $primary;
+            }
+        }  
+      }
+
+      .buttons, .circles {
+        opacity: 0;
+      }
+    }
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      .buttons {
+        opacity: 1;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin-top: 48px;
+      }
+
+      .circles {
+        margin-left: 24px;
+        opacity: 1;
+  
+        .circle {
+          display: inline-flex;
+          margin: 96px 2px 0 2px;
+          width: 64px;
+          height: 64px;
+          border-radius: 50px;
+          background-color: $form-border-color; 
+          color: $hover-content-color;
+  
+          .circleText {
+            display: inline-block; 
+            margin: auto;
+  
+            h5 {
+              margin: 4px 0 0 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    text-align: center;
+    padding: 20px;
+
+    h5 {
+      color: $primary;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+
+    .stars {
+      a {
+        text-decoration: none;
+        color: rgb(42, 42, 42);
+      }
+    }
+  }
+
+  .line {
+    margin: 0 10px;
+    border-bottom: 1px solid #2a2a2a;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 30px;
+      border-bottom: 4px solid $primary;
+      transform: translateX(-50%);
+    }
+  }
+
+  .actions {
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &:hover{
+    .buttons{
+      opacity: 1;
+    }
+    .price:first-child{
+      background-color: $primary;
+     } 
+
+    .price {
+      display: flex;
+      align-items: center;
+    }
+
+    .oldPrice {
+      color: #808080;
+      text-decoration: line-through;
+      text-decoration-color:#000;
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+}

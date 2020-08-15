@@ -6,16 +6,45 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+  feedbacks: [
+    {
+      title: 'Client feedback',
+      sign: '"',
+      opinion:
+        'Some text here Some text here  Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here',
+      client_image: '/images/john-smith.jpg',
+      client_name: 'John Smith',
+      client_type: 'Furniture client',
+  brands: [
+    {
+      brandLogoImage: '/images/brands-logo/brand-logo-1.jpg',
+    },
+    {
+      brandLogoImage: '/images/brands-logo/brand-logo-2.jpg',
+    },
+    {
+      brandLogoImage: '/images/brands-logo/brand-logo-3.jpg',
+    },
+    {
+      brandLogoImage: '/images/brands-logo/brand-logo-4.jpg',
+    },
+    {
+      brandLogoImage: '/images/brands-logo/brand-logo-5.jpg',
+    },
+    {
+      brandLogoImage: '/images/brands-logo/brand-logo-6.jpg',
+    },
+  ],
   products: [
     {
       id: 'aenean-ru-bristique-1',
       name: 'Aenean Ru Bristique 1',
       image: '/images/furniture/furniture-1.jpeg',
       category: 'bed',
-      //image: 'https://i.postimg.cc/HL4mFXMs/pexels-photo-775219.jpg',
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
       compare: false,
       favorite: true,
@@ -29,6 +58,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
       compare: false,
     },
@@ -40,6 +70,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
       compare: true,
     },
@@ -52,6 +83,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
       compare: true,
     },
@@ -63,6 +95,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -73,6 +106,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -84,6 +118,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -94,6 +129,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -104,6 +140,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -114,6 +151,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -125,6 +163,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -136,6 +175,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -146,6 +186,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -156,6 +197,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -167,6 +209,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -178,6 +221,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -189,6 +233,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -200,6 +245,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -210,6 +256,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -220,6 +267,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -230,6 +278,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -241,6 +290,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -251,6 +301,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
     {
@@ -262,6 +313,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
+      hotDeals: 'HOT DEALS',
       newFurniture: true,
     },
   ],

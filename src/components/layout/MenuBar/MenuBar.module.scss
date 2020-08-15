@@ -49,3 +49,11 @@
     }
   }
 }
+
+@media (max-width: 960px) {
+  .root {
+    :global(.container) > :global(.row) {
+      height: 150px;
+    }
+  }
+}

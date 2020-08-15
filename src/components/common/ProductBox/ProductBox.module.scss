@@ -88,14 +88,15 @@
     align-items: center;
   }
 
-  &:hover{
-    .buttons{
+  &:hover {
+    .buttons {
       opacity: 1;
     }
   }
-    .price:first-child{
-      background-color: $primary;
-     } 
+  
+  .price:first-child {
+    background-color: $primary;
+  }
 
   .price {
     display: flex;
@@ -103,11 +104,10 @@
   }
 
   .oldPrice {
-    color: #808080;
+    color: $text-color;
     text-decoration: line-through;
     text-decoration-color:#000;
     padding: 8px;
     font-size: 14px;
-
-  }
+  } 
 }
