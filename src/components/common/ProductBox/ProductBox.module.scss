@@ -88,13 +88,14 @@
     align-items: center;
   }
 
-  &:hover{
-    .buttons{
+  &:hover {
+    .buttons {
       opacity: 1;
     }
-    .price:first-child{
+
+    .price:first-child {
       background-color: $primary;
-     } 
+    }
 
     .price {
       display: flex;
@@ -110,3 +111,4 @@
     }
   }
 }
+

@@ -5,6 +5,8 @@
   display: inline-flex;
   height: 45px;
   color: $text-color;
+  width: 100%;
+  max-width: 523px;
 
   .category {
     border-right: 1px solid $form-border-color;
@@ -56,14 +58,14 @@
       border: 1px solid $form-border-color;
       left: -1px;
       right: -1px;
-      
+
       a {
         height: 45px;
         font-size: 14px;
         padding: 10px 20px;
         color: $text-color;
         transition: .5s ease-in-out;
-       
+
         &:hover {
           background-color: $primary;
           color: $hover-content-color;
@@ -72,7 +74,7 @@
         }
       }
     }
-  }  
+  }
 
   .listTitle {
     padding: 10px 35px;
@@ -107,12 +109,14 @@
     display: flex;
     align-items: center;
     position: relative;
+    overflow: hidden;
 
     input {
       border: 0;
       padding-left: 10px;
       font-size: 14px;
       outline: none;
+      width: 100%;
 
       &::placeholder {
         color: $text-color;
