@@ -1,7 +1,5 @@
 /* selectors */
-export const getAll = ({ deviceName }) => deviceName;
-export const getCount = ({ deviceName }) => deviceName.length;
-
+export const getDeviceName = ({ deviceName }) => deviceName;
 // action name creator
 const reducerName = 'deviceName';
 const createActionName = name => `app/${reducerName}/${name}`;
@@ -15,17 +13,17 @@ export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case ADD_WINDOW_WIDTH: {
       console.log('action.payload', action.payload);
-      console.log('statePart', statePart);
+      console.log('oldStatePart', statePart);
 
       let screenMode = '';
-      if (action.payload < 480) {
+      if (action.payload < 768) {
         screenMode = 'mobile';
-      } else if (action.payload < 768) {
+      } else if (action.payload < 992) {
         screenMode = 'tablet';
       } else {
         screenMode = 'desktop';
       }
-
+      console.log('newStatePart', screenMode);
       return screenMode;
     }
     default:

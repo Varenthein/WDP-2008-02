@@ -1,18 +1,13 @@
 import { connect } from 'react-redux';
 import MainLayout from './MainLayout';
-import { getAll, addWindowWidth } from '../../../redux/mainLayoutRedux.js';
+import { getDeviceName, addWindowWidth } from '../../../redux/deviceNameRedux.js';
 
 const mapStateToProps = state => ({
-  deviceName: getAll(state),
+  deviceName: getDeviceName(state),
 });
 
 const mapDispatchToProps = dispatch => ({
-  addWindowWidth: window_width => dispatch(addWindowWidth(spy(window_width))),
+  addWindowWidth: window_width => dispatch(addWindowWidth(window_width)),
 });
-
-export function spy(gggggg) {
-  console.log('Container: ', gggggg);
-  return gggggg;
-}
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainLayout);
