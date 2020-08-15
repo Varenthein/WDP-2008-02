@@ -15,6 +15,8 @@ const initialState = {
       client_image: '/images/john-smith.jpg',
       client_name: 'John Smith',
       client_type: 'Furniture client',
+    },
+  ],
   brands: [
     {
       brandLogoImage: '/images/brands-logo/brand-logo-1.jpg',
