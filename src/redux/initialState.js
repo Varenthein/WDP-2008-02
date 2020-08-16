@@ -1,10 +1,22 @@
 const initialState = {
+  deviceName: '',
   categories: [
     { id: 'bed', name: 'Bed' },
     { id: 'chair', name: 'Chair' },
     { id: 'sofa', name: 'Sofa' },
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
+  ],
+  feedbacks: [
+    {
+      title: 'Client feedback',
+      sign: '"',
+      opinion:
+        'Some text here Some text here  Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here',
+      client_image: '/images/john-smith.jpg',
+      client_name: 'John Smith',
+      client_type: 'Furniture client',
+    },
   ],
   brands: [
     {
@@ -37,8 +49,8 @@ const initialState = {
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
-      favorite: true,
       compare: false,
+      favorite: true,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -51,7 +63,6 @@ const initialState = {
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
-      favorite: false,
       compare: false,
     },
     {
@@ -64,7 +75,6 @@ const initialState = {
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
-      favorite: false,
       compare: true,
     },
     {
@@ -78,7 +88,6 @@ const initialState = {
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
-      favorite: true,
       compare: true,
     },
     {

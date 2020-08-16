@@ -4,8 +4,8 @@
 // }
 
 .main {
-  background-color: #2a2a2a;
-  color: #ffffff;
+  background-color: $black-color;
+  color: $white-color;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -13,7 +13,7 @@
   transition:all $transition-time ease;
 
   &:not(.noHover):hover {
-    color: #ffffff !important;
+    color: $white-color !important;
     background-color: $primary;
     text-decoration: none;
   }
@@ -23,7 +23,7 @@
     -ms-transform: rotateZ(-30deg);
     transform: rotateZ(-30deg);
     background-color: $primary;
-    color: #2a2a2a;
+    color: $black-color;
   }
 }
 
@@ -39,15 +39,15 @@
 .outline {
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid #2a2a2a;
-  color: #2a2a2a;
+  border: 1px solid $black-color;
+  color: $black-color;
   font-size: 13px;
   line-height: 22px;
   transition:all $transition-time ease;
 
   &:not(.noHover):hover {
-    background-color: #2a2a2a;
-    color: #ffffff;
+    background-color: $black-color;
+    color: $white-color;
   }
 
   &:hover {
@@ -55,7 +55,7 @@
     -ms-transform: rotateZ(-30deg);
     transform: rotateZ(-30deg);
     background-color: $primary;
-    color: #2a2a2a;
+    color: $black-color;
   }
 
 }
@@ -63,8 +63,8 @@
 .active{
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid #2a2a2a;
-  color: #ffffff;
+  border: 1px solid $black-color;
+  color: $white-color;
   font-size: 13px;
   line-height: 22px;
   background-color: $primary;
