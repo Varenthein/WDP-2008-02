@@ -29,6 +29,8 @@ class GallerySlider extends React.Component {
     const featured = products.filter(item => item.newFurniture === true);
     const topRated = products.filter(item => item.stars >= 4);
 
+    console.log(topSeller);
+
     return (
       <div className={styles.root}>
         <div className={styles.title}>FURNITURE GALLERY</div>
@@ -48,19 +50,32 @@ class GallerySlider extends React.Component {
         </div>
         <div className={styles.sliderImageWrapper}>
           <img
-            src={topSeller[0].image}
+            src={topSeller[5].image}
             alt='Coming soon!'
             className={styles.sliderImage}
           />
           <div className={styles.buttonsWrapper}>
-            <Button variant='outline'>
-              <FontAwesomeIcon icon={faHeart} />
-            </Button>
-            <Button variant='outline'>
+            <div className={styles.button}>
+              <div className={styles.buttonHover}>
+                <Button noHover variant='gallerySlider'>
+                  <FontAwesomeIcon icon={faHeart} className={styles.buttonHover} />
+                </Button>
+              </div>
+              <div className={styles.description}>Add to Favorite</div>
+            </div>
+            <Button noHover variant='gallerySlider'>
               <FontAwesomeIcon icon={faExchangeAlt} />
             </Button>
+            <Button noHover variant='gallerySlider'>
+              <FontAwesomeIcon icon={faEye} />
+            </Button>
+            <Button noHover variant='gallerySlider'>
+              <FontAwesomeIcon icon={faShoppingBasket} />
+            </Button>
+            <div className={styles.test}> TEST </div>
           </div>
         </div>
+        <div className={styles.slider}></div>
       </div>
     );
   }

@@ -93,8 +93,29 @@
     position: absolute;
     bottom: 50px;
     left: 20px;
-    button {
-      position: relative;
-    }
   }
+
+  .slider {
+    width: 100%;
+    height: 87px;
+    border: .1px solid $gallery-border-color;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .description {
+    margin-left: 5px;
+    opacity: 1;
+    background-color: $text-color;
+    color: $white;
+  }
+  
+  .buttonHover:hover .description {
+    color: black;
+  } 
 }
+
