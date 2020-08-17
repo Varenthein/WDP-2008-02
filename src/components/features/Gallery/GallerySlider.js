@@ -7,12 +7,15 @@ import {
   faStar,
   faExchangeAlt,
   faShoppingBasket,
+  faChevronLeft,
+  faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart, faEye } from '@fortawesome/free-regular-svg-icons';
 import Button from '../../common/Button/Button';
 
 class GallerySlider extends React.Component {
   state = {
+    activeSlidePage: 0,
     activeCategory: 'topSeller',
   };
 
@@ -22,14 +25,9 @@ class GallerySlider extends React.Component {
 
   render() {
     const { products, gallery } = this.props;
-    const { activeCategory } = this.state;
+    const { activeCategory, activeSlidePage } = this.state;
 
     const topSeller = products.filter(item => item.topSeller);
-    const saleOff = products.filter(item => item.oldPrice);
-    const featured = products.filter(item => item.newFurniture === true);
-    const topRated = products.filter(item => item.stars >= 4);
-
-    console.log(topSeller);
 
     return (
       <div className={styles.root}>
@@ -54,41 +52,29 @@ class GallerySlider extends React.Component {
             alt='Coming soon!'
             className={styles.sliderImage}
           />
-
           <div className={styles.buttonsWrapper}>
             <div className={styles.button}>
-              <div className={styles.buttonHover}>
-                <div>
-                  <Button variant='gallerySlider'>
-                    <FontAwesomeIcon icon={faHeart} />
-                  </Button>
-                </div>
-              </div>
+              <Button variant='gallerySlider'>
+                <FontAwesomeIcon icon={faHeart} className={styles.icon} />
+              </Button>
               <div className={styles.description}>Add To Favorite</div>
             </div>
-
             <div className={styles.button}>
-              <div className={styles.buttonHover}>
-                <Button variant='gallerySlider'>
-                  <FontAwesomeIcon icon={faExchangeAlt} />
-                </Button>
-              </div>
+              <Button variant='gallerySlider'>
+                <FontAwesomeIcon icon={faExchangeAlt} />
+              </Button>
               <div className={styles.description}>Add To Compare</div>
             </div>
             <div className={styles.button}>
-              <div className={styles.buttonHover}>
-                <Button variant='gallerySlider'>
-                  <FontAwesomeIcon icon={faEye} />
-                </Button>
-              </div>
+              <Button variant='gallerySlider'>
+                <FontAwesomeIcon icon={faEye} />
+              </Button>
               <div className={styles.description}>Enlarge</div>
             </div>
             <div className={styles.button}>
-              <div className={styles.buttonHover}>
-                <Button variant='gallerySlider'>
-                  <FontAwesomeIcon icon={faShoppingBasket} />
-                </Button>
-              </div>
+              <Button variant='gallerySlider'>
+                <FontAwesomeIcon icon={faShoppingBasket} />
+              </Button>
               <div className={styles.description}>Add To Cart</div>
             </div>
           </div>
@@ -115,8 +101,26 @@ class GallerySlider extends React.Component {
               <div></div>
             </div>
           </div>
-
-          <div className={styles.slider}></div>
+          <div className={styles.slider}>
+            <Button variant='galleryArrow'>
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </Button>
+            {topSeller
+              .slice(activeSlidePage * 6, (activeSlidePage + 1) * 6)
+              .map(item => (
+                <div
+                  className={
+                    item.id === topSeller[5].id ? styles.active : styles.inActive
+                  }
+                  key={item.id}
+                >
+                  <img src={item.image} alt='coming soon' />
+                </div>
+              ))}
+            <Button variant='galleryArrow'>
+              <FontAwesomeIcon icon={faChevronRight} />
+            </Button>
+          </div>
         </div>
       </div>
     );

@@ -32,7 +32,6 @@ class NewFurniture extends React.Component {
     } else if (deviceName === 'desktop') {
       productsPerPage = 8;
     }
-    console.log('productsPerPage:', productsPerPage);
 
     const pagesCount = Math.ceil(categoryProducts.length / productsPerPage);
 

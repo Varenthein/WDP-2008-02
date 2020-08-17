@@ -60,7 +60,7 @@
 
 }
 
-.active{
+.active {
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid $black-color;
@@ -72,6 +72,7 @@
 
 .gallerySlider{
   display: inline-block;
+  width: 36px;
   padding: 5px 10px;
   border: 1px solid $text-color;
   color: $text-color;
@@ -86,7 +87,7 @@
   }
 }
 
-.gallery{
+.gallery {
   display: inline-block;
   padding: 10px 30px;
   color: $white;
@@ -97,4 +98,11 @@
   line-height: 22px;
   cursor: pointer;
   transition:all $transition-time ease;
+}
+
+.galleryArrow {
+  @extend .main;
+  padding: 20px 7px;
+  height: 60px;
+  width: 25px;
 }
