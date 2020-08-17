@@ -46,7 +46,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
       favorite: true,
       compare: false,
@@ -100,7 +100,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -111,7 +111,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -123,7 +123,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -134,7 +134,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -145,7 +145,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -156,7 +156,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -168,7 +168,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -180,7 +180,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -191,7 +191,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -202,7 +202,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -214,7 +214,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -226,7 +226,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -238,7 +238,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -250,7 +250,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -261,7 +261,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -272,7 +272,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -283,7 +283,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -295,7 +295,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -306,7 +306,7 @@ const initialState = {
       price: 30,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
     {
@@ -318,7 +318,7 @@ const initialState = {
       oldPrice: 50,
       stars: 2,
       promo: 'sale',
-      hotDeals: 'HOT DEALS',
+      hotDeals: '',
       newFurniture: true,
     },
   ],
