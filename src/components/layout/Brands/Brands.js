@@ -8,32 +8,60 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 class Brands extends React.Component {
+  state = {
+    activePage: 0,
+  };
+
+  rightAction() {
+    this.setState(state => ({
+      activePage: state.activePage + 1,
+    }));
+  }
+
+  leftAction() {
+    this.setState(state => ({
+      activePage: state.activePage - 1,
+    }));
+  }
+
   render() {
-    const { brands } = this.props;
+    const { brands, device } = this.props;
+
+    const brandOnDevice =
+      device === 'small' ? 1 : device === 'medium' ? 2 : device === 'large' ? 3 : 6;
+    const pageCount = Math.ceil(brands.length / brandOnDevice);
+
+    const pages = [];
+    for (let i = 0; i < pageCount; i++) {
+      pages.push(
+        <div key={i} className={styles.brandsImages}>
+          {brands.slice(i * brandOnDevice, (i + 1) * brandOnDevice).map(brand => (
+            <div key={brand.id}>
+              <img
+                src={brand.brandLogoImage}
+                alt={'brand'}
+                className={styles.brandLogoImage}
+              />
+            </div>
+          ))}
+        </div>
+      );
+    }
 
     return (
       <div className={styles.root}>
         <div className='container'>
           <div className='col'>
             <div className={styles.brandsRow}>
-              <div className={styles.arrowLeft}>
+              <div className={styles.arrowLeft} onClick={() => this.leftAction()}>
                 <div className={styles.arrowShadow}></div>
                 <FontAwesomeIcon
                   icon={faArrowAltCircleLeft}
                   className={styles.leftArrow}
                 ></FontAwesomeIcon>
               </div>
-              <div className={styles.brandsImages}>
-                {brands.map(brand => (
-                  <img
-                    key={brand.brandLogoImage}
-                    src={brand.brandLogoImage}
-                    alt={'brand'}
-                    className={styles.brandLogoImage}
-                  />
-                ))}
-              </div>
-              <div className={styles.arrowRight}>
+              {pages}
+              <div className={styles.arrowRight} onClick={() => this.rightAction()}>
                 <div className={styles.arrowShadow}></div>
                 <FontAwesomeIcon
                   icon={faArrowAltCircleRight}
@@ -54,6 +82,7 @@ Brands.propTypes = {
       brandLogoImage: PropTypes.string,
     })
   ),
+  device: PropTypes.string,
   //brands: PropTypes.any,
 };
 

@@ -4,15 +4,20 @@
   padding: 5rem 0;
 
   .brandsRow {
-    display: inline-flex;
+    display: flex;
     padding: 24px 0;
     border-top: 1px solid $header-topbar-bg;
     border-bottom: 1px solid $header-topbar-bg;
+    
   }
   
   .brandLogoImage {
     border: 1px solid $header-topbar-bg;
     margin: 0 30px;
+  }
+
+  .brandsImages{
+    display: flex;
   }
   
   .arrowShadow {
