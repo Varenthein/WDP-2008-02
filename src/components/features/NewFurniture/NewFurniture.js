@@ -25,11 +25,11 @@ class NewFurniture extends React.Component {
     const categoryProducts = products.filter(item => item.category === activeCategory);
 
     let productsPerPage = 1;
-    if (deviceName == 'mobile') {
+    if (deviceName === 'mobile') {
       productsPerPage = 1;
-    } else if (deviceName == 'tablet') {
+    } else if (deviceName === 'tablet') {
       productsPerPage = 2;
-    } else if (deviceName == 'desktop') {
+    } else if (deviceName === 'desktop') {
       productsPerPage = 8;
     }
     console.log('productsPerPage:', productsPerPage);

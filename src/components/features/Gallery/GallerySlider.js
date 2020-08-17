@@ -54,28 +54,70 @@ class GallerySlider extends React.Component {
             alt='Coming soon!'
             className={styles.sliderImage}
           />
+
           <div className={styles.buttonsWrapper}>
             <div className={styles.button}>
               <div className={styles.buttonHover}>
-                <Button noHover variant='gallerySlider'>
-                  <FontAwesomeIcon icon={faHeart} className={styles.buttonHover} />
+                <div>
+                  <Button variant='gallerySlider'>
+                    <FontAwesomeIcon icon={faHeart} />
+                  </Button>
+                </div>
+              </div>
+              <div className={styles.description}>Add To Favorite</div>
+            </div>
+
+            <div className={styles.button}>
+              <div className={styles.buttonHover}>
+                <Button variant='gallerySlider'>
+                  <FontAwesomeIcon icon={faExchangeAlt} />
                 </Button>
               </div>
-              <div className={styles.description}>Add to Favorite</div>
+              <div className={styles.description}>Add To Compare</div>
             </div>
-            <Button noHover variant='gallerySlider'>
-              <FontAwesomeIcon icon={faExchangeAlt} />
-            </Button>
-            <Button noHover variant='gallerySlider'>
-              <FontAwesomeIcon icon={faEye} />
-            </Button>
-            <Button noHover variant='gallerySlider'>
-              <FontAwesomeIcon icon={faShoppingBasket} />
-            </Button>
-            <div className={styles.test}> TEST </div>
+            <div className={styles.button}>
+              <div className={styles.buttonHover}>
+                <Button variant='gallerySlider'>
+                  <FontAwesomeIcon icon={faEye} />
+                </Button>
+              </div>
+              <div className={styles.description}>Enlarge</div>
+            </div>
+            <div className={styles.button}>
+              <div className={styles.buttonHover}>
+                <Button variant='gallerySlider'>
+                  <FontAwesomeIcon icon={faShoppingBasket} />
+                </Button>
+              </div>
+              <div className={styles.description}>Add To Cart</div>
+            </div>
           </div>
+          <div className={styles.ratingCard}>
+            <div className={styles.priceCirlce}>
+              <div>$ {topSeller[5].price}</div>
+              <div>$ {topSeller[5].oldPrice}</div>
+            </div>
+
+            <div className={styles.content}>
+              <div></div>
+              <h5>{topSeller[5].name}</h5>
+              <div className={styles.stars}>
+                {[1, 2, 3, 4, 5].map(i => (
+                  <a key={i} href='#'>
+                    {i <= topSeller[5].stars ? (
+                      <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
+                    ) : (
+                      <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
+                    )}
+                  </a>
+                ))}
+              </div>
+              <div></div>
+            </div>
+          </div>
+
+          <div className={styles.slider}></div>
         </div>
-        <div className={styles.slider}></div>
       </div>
     );
   }
