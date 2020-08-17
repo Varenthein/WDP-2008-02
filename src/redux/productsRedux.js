@@ -9,10 +9,10 @@ export const getNew = ({ products }) =>
 export const getLimitedProducts = ({ products }, limit) => products.slice(0, limit);
 
 export const sortAscByParam = ({ products }, param) =>
-  products.sort((a, b) => a.param - b.param);
+  products.sort((a, b) => a.price - b.price);
 
 export const sortDescByParam = ({ products }, param) =>
-  products.sort((a, b) => b.param - a.param);
+  products.sort((a, b) => b.price - a.price);
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
