@@ -6,6 +6,7 @@
     bottom: 0;
     max-height: 200px;
     position: sticky;
+    z-index: 99;
 
     :global(.container) > *{
       border: 1px solid #e1e1e1;

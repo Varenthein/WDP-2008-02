@@ -5,6 +5,8 @@ import styles from './Homepage.module.scss';
 
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
+import Feedback from '../../layout/Feedback/FeedbackContainer';
+import Brands from '../../layout/Brands/BrandsContainer';
 import Promoted from '../../common/Promoted/PromotedContainer';
 import ProductCompare from '../../features/ProductCompare/ProductCompareContainer';
 
@@ -14,6 +16,8 @@ const Homepage = () => (
     <FeatureBoxes />
     <NewFurniture />
     <ProductCompare />
+    <Brands />
+    <Feedback />
   </div>
 );
 

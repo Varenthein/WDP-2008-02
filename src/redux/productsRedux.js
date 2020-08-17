@@ -26,28 +26,14 @@ export const removeFromCompare = payload => ({ payload, type: REMOVE_FROM_COMPAR
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case ADD_TO_COMPARE: {
-      return statePart.map(product => {
-        if (product.id === action.payload) {
-          return {
-            ...product,
-            compare: true,
-          };
-        } else {
-          return product;
-        }
-      });
+      return statePart.map(product =>
+        product.id === action.payload ? { ...product, compare: true } : product
+      );
     }
     case REMOVE_FROM_COMPARE: {
-      return statePart.map(product => {
-        if (product.id === action.payload) {
-          return {
-            ...product,
-            compare: false,
-          };
-        } else {
-          return product;
-        }
-      });
+      return statePart.map(product =>
+        product.id === action.payload ? { ...product, compare: false } : product
+      );
     }
     default:
       return statePart;
