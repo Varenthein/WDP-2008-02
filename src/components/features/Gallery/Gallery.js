@@ -29,7 +29,7 @@ const Gallery = ({ products }) => {
                 </div>
                 <h1>Bedroom bed</h1>
                 <Button variant='gallery' className={styles.button}>
-                  SCHOP NOW
+                  SHOP NOW
                 </Button>
               </div>
             </div>
