@@ -12,10 +12,10 @@ const Gallery = ({ products }) => {
     <div className={styles.root}>
       <div className='container'>
         <div className='row'>
-          <Col xs={12} md={6}>
+          <Col xs={12} lg={6}>
             <GallerySlider />
           </Col>
-          <Col xs={12} md={6}>
+          <Col xs={12} lg={6}>
             <div className={styles.imageWrapper}>
               <img
                 className={styles.image}
@@ -24,14 +24,13 @@ const Gallery = ({ products }) => {
               />
               <div className={styles.content}>
                 <div>
-                  <sup>from </sup>$ 50.80
+                  <h6>from </h6>
+                  <h1>$ 50.80</h1>
                 </div>
-                <div>Bedroom bed</div>
-                <div>
-                  <Button noHover variant='gallery'>
-                    SCHOP NOW
-                  </Button>
-                </div>
+                <h1>Bedroom bed</h1>
+                <Button variant='gallery' className={styles.button}>
+                  SCHOP NOW
+                </Button>
               </div>
             </div>
           </Col>

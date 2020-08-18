@@ -31,7 +31,7 @@ class GallerySlider extends React.Component {
 
     return (
       <div className={styles.root}>
-        <div className={styles.title}>FURNITURE GALLERY</div>
+        <h5 className={styles.title}>FURNITURE GALLERY</h5>
         <div className={styles.menu}>
           <ul>
             {gallery.map(item => (
@@ -57,35 +57,34 @@ class GallerySlider extends React.Component {
               <Button variant='gallerySlider'>
                 <FontAwesomeIcon icon={faHeart} className={styles.icon} />
               </Button>
-              <div className={styles.description}>Add To Favorite</div>
+              <span>Add To Favorite</span>
             </div>
             <div className={styles.button}>
               <Button variant='gallerySlider'>
                 <FontAwesomeIcon icon={faExchangeAlt} />
               </Button>
-              <div className={styles.description}>Add To Compare</div>
+              <span>Add To Compare</span>
             </div>
             <div className={styles.button}>
               <Button variant='gallerySlider'>
                 <FontAwesomeIcon icon={faEye} />
               </Button>
-              <div className={styles.description}>Enlarge</div>
+              <span>Enlarge</span>
             </div>
             <div className={styles.button}>
               <Button variant='gallerySlider'>
                 <FontAwesomeIcon icon={faShoppingBasket} />
               </Button>
-              <div className={styles.description}>Add To Cart</div>
+              <span>Add To Cart</span>
             </div>
           </div>
           <div className={styles.ratingCard}>
             <div className={styles.priceCirlce}>
-              <div>$ {topSeller[5].price}</div>
-              <div>$ {topSeller[5].oldPrice}</div>
+              <h5>$ {topSeller[5].price}</h5>
+              <h6>$ {topSeller[5].oldPrice}</h6>
             </div>
 
             <div className={styles.content}>
-              <div></div>
               <h5>{topSeller[5].name}</h5>
               <div className={styles.stars}>
                 {[1, 2, 3, 4, 5].map(i => (
@@ -98,7 +97,6 @@ class GallerySlider extends React.Component {
                   </a>
                 ))}
               </div>
-              <div></div>
             </div>
           </div>
           <div className={styles.slider}>

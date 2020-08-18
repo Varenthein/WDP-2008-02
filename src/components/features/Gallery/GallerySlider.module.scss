@@ -3,11 +3,11 @@
 .root {
 
   .title {
-    position: relative;
+    //position: relative;
     color: $primary;
     font-weight: 600;
     margin-bottom: 30px;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     padding-bottom: 10px;
     border-bottom: 2px solid $gallery-border-color;
   
@@ -99,33 +99,33 @@
     display: flex;
     align-items: center;
     margin-bottom: 5px;
-    &:hover .description {
+
+    span {
+      display: none;
+      height: 30px;
+      margin-left: 10px;
+      padding: 4px 10px;
+      background-color: $text-color;
+      color: $white;
+      position: relative;
+  
+      &::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 8px 5px 0;
+        border-color: transparent $text-color transparent transparent;
+        left: -8px;
+        top: 10px;
+      }
+    }
+
+    &:hover span {
       display: block;
     }
   }
-
-  .description {
-    display: none;
-    height: 30px;
-    margin-left: 12px;
-    padding: 5px 5px;
-    font-size: 14px;
-    background-color: $text-color;
-    color: $white;
-    z-index: 1;
-    position: relative;
-    &::before {
-      position: absolute;
-      content: '';
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 5px 8px 5px 0;
-      border-color: transparent $text-color transparent transparent;
-      left: -8px;
-      top: 10px;
-    }
-  }  
 
   .ratingCard {
     position: absolute;
@@ -151,15 +151,16 @@
     padding: 20px;
     z-index: 1;
 
-   div:first-child {
-      font-size: 20px;
+   h5 {
       color: $white;
+      margin-bottom: 0;
     }
     
-    div:last-child {
-      font-size: 15px;
+    h6 {
       text-decoration: line-through;
       color: $white;
+      margin-bottom: 0;
+      padding-top: 5px;
     }
   }
 
@@ -173,8 +174,9 @@
     border: .1px solid $gallery-border-color;
     box-shadow: 5px;
 
-    div:first-child {
+    &::before {
       position: absolute;
+      content: '';
       left: 0;
       top: 0;
       width: 0;
@@ -183,8 +185,9 @@
       border-width: 25px 25px 0 0;
       border-color: #030303 transparent transparent transparent;
     }
-    div:last-child {
+    &::after {
       position: absolute;
+      content: '';
       right: 0;
       bottom: 0;
       width: 0;
@@ -193,7 +196,6 @@
       border-width: 0 0 25px 25px;
       border-color: transparent transparent $text-color transparent;
     }
-
 
     h5 {
       color: $text-color;

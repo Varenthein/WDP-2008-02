@@ -96,8 +96,10 @@
   background-color: $gallery-color;
   font-size: 13px;
   line-height: 22px;
-  cursor: pointer;
-  transition:all $transition-time ease;
+  
+  &:hover{
+    text-decoration: none;
+  }
 }
 
 .galleryArrow {
