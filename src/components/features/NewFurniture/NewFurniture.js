@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Col } from 'react-flexbox-grid';
 import styles from './NewFurniture.module.scss';
-import ProductBox from '../../common/ProductBox/ProductBox';
+import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import SwipeAction from '../../common/SwipeAction/SwipeAction';
 
 class NewFurniture extends React.Component {
