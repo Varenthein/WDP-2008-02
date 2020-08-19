@@ -13,9 +13,6 @@
   transition:all $transition-time ease;
 
   &:not(.noHover):hover {
-    -webkit-transform: rotateZ(-30deg);
-    -ms-transform: rotateZ(-30deg);
-    transform: rotateZ(-30deg);
     background-color: $primary;
     color: $black-color;
     text-decoration: none;
@@ -41,9 +38,6 @@
   transition:all $transition-time ease;
 
   &:not(.noHover):hover {
-    -webkit-transform: rotateZ(-30deg);
-    -ms-transform: rotateZ(-30deg);
-    transform: rotateZ(-30deg);
     background-color: $primary;
     color: $black-color;
   }
