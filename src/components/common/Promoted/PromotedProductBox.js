@@ -124,10 +124,10 @@ class PromotedProductBox extends React.Component {
                 ) : (
                   ''
                 )}
-                <Button noHover variant='small'>
-                  $ {product.price}
-                </Button>
               </div>
+              <Button noHover variant='small'>
+                $ {product.price}
+              </Button>
             </div>
           </div>
         ))}
