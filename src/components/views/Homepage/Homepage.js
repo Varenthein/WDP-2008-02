@@ -9,6 +9,7 @@ import Feedback from '../../layout/Feedback/FeedbackContainer';
 import Brands from '../../layout/Brands/BrandsContainer';
 import Promoted from '../../common/Promoted/PromotedContainer';
 import Gallery from '../../features/Gallery/GalleryContainer';
+import ProductCompare from '../../features/ProductCompare/ProductCompareContainer';
 
 const Homepage = () => (
   <div className={styles.root}>
@@ -16,6 +17,7 @@ const Homepage = () => (
     <FeatureBoxes />
     <NewFurniture />
     <Gallery />
+    <ProductCompare />
     <Brands />
     <Feedback />
   </div>

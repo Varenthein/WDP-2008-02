@@ -92,15 +92,17 @@
     .buttons {
       opacity: 1;
     }
+    .price :first-child {
+      background-color: $primary;
+    }
   }
   
-  .price:first-child {
-    background-color: $primary;
-  }
+  
 
   .price {
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
   }
 
   .oldPrice {
