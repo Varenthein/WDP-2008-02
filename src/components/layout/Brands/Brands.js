@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Brands.module.scss';
+import Swipeable from '../../common/Swipeable/Swipeable';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArrowAltCircleRight,
@@ -10,58 +11,94 @@ import {
 class Brands extends React.Component {
   state = {
     activePage: 0,
+    manualPageChange: false,
   };
 
-  rightAction() {
-    this.setState(state => ({
-      activePage: state.activePage + 1,
-    }));
-  }
+  handlePageChange = newPage => {
+    this.setState({ activePage: newPage, manualPageChange: true });
+  };
 
-  leftAction() {
-    this.setState(state => ({
-      activePage: state.activePage - 1,
-    }));
-  }
+  handleRightAction = () => {
+    const { activePage, manualPageChange } = this.state;
+    if (manualPageChange) {
+      this.setState({ manualPageChange: false });
+    } else if (activePage > 0) {
+      this.setState({ activePage: activePage - 1 });
+    }
+  };
+
+  handleLeftAction = () => {
+    const { activePage, manualPageChange } = this.state;
+    if (manualPageChange) {
+      this.setState({ manualPageChange: false });
+    } else {
+      this.setState({ activePage: activePage + 1 });
+    }
+  };
 
   render() {
-    const { brands, device } = this.props;
+    const { brands, deviceName } = this.props;
+    const { activePage } = this.state;
+    const productsPerPage =
+      deviceName === 'smobile'
+        ? 1
+        : deviceName === 'mobile'
+        ? 2
+        : deviceName === 'tablet'
+        ? 3
+        : 6;
 
-    const brandOnDevice =
-      device === 'small' ? 1 : device === 'medium' ? 2 : device === 'large' ? 3 : 6;
-    const pageCount = Math.ceil(brands.length / brandOnDevice);
-
+    const pageCount = Math.ceil(brands.length / productsPerPage);
+    console.log(pageCount);
+    console.log(productsPerPage);
     const pages = [];
+    console.log(pages);
     for (let i = 0; i < pageCount; i++) {
       pages.push(
         <div key={i} className={styles.brandsImages}>
-          {brands.slice(i * brandOnDevice, (i + 1) * brandOnDevice).map(brand => (
-            <div key={brand.id}>
-              <img
-                src={brand.brandLogoImage}
-                alt={'brand'}
-                className={styles.brandLogoImage}
-              />
+          {brands.slice(i * productsPerPage, (i + 1) * productsPerPage).map(brand => (
+            <div key={brand.id} className={styles.brandLogoImage}>
+              <img src={brand.brandLogoImage} alt={'brand'} />
             </div>
           ))}
         </div>
       );
     }
+    const pageDecrease = () => {
+      if (activePage > 0) {
+        this.handlePageChange(activePage - 1);
+      }
+    };
 
+    const pageIncrease = () => {
+      if (activePage === pageCount - 1) {
+        return;
+      } else {
+        this.handlePageChange(activePage + 1);
+      }
+    };
     return (
       <div className={styles.root}>
         <div className='container'>
           <div className='col'>
             <div className={styles.brandsRow}>
-              <div className={styles.arrowLeft} onClick={() => this.leftAction()}>
+              <div className={styles.arrowLeft} onClick={pageDecrease}>
                 <div className={styles.arrowShadow}></div>
                 <FontAwesomeIcon
                   icon={faArrowAltCircleLeft}
                   className={styles.leftArrow}
                 ></FontAwesomeIcon>
               </div>
-              {pages}
-              <div className={styles.arrowRight} onClick={() => this.rightAction()}>
+              <div className={styles.imageWrapper}>
+                <Swipeable
+                  activePage={this.state.activePage}
+                  rightAction={this.handleRightAction}
+                  leftAction={this.handleLeftAction}
+                >
+                  {pages}
+                </Swipeable>
+              </div>
+              <div className={styles.arrowRight} onClick={pageIncrease}>
                 <div className={styles.arrowShadow}></div>
                 <FontAwesomeIcon
                   icon={faArrowAltCircleRight}
@@ -82,7 +119,7 @@ Brands.propTypes = {
       brandLogoImage: PropTypes.string,
     })
   ),
-  device: PropTypes.string,
+  deviceName: PropTypes.string,
   //brands: PropTypes.any,
 };
 
