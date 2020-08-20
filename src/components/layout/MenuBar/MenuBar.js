@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import ProductSearch from '../../features/ProductSearch/ProductSearch';
+import { Col } from 'react-flexbox-grid';
 
 import styles from './MenuBar.module.scss';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -16,33 +17,35 @@ const MenuBar = ({ children }) => (
         <div className='col'>
           <ProductSearch />
         </div>
-        <div className={'col-auto ' + styles.menu}>
-          <ul>
-            <li>
-              <a href='#' className={styles.active}>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href='#'>Furniture</a>
-            </li>
-            <li>
-              <a href='#'>Chair</a>
-            </li>
-            <li>
-              <a href='#'>Table</a>
-            </li>
-            <li>
-              <a href='#'>Sofa</a>
-            </li>
-            <li>
-              <a href='#'>Bedroom</a>
-            </li>
-            <li>
-              <a href='#'>Blog</a>
-            </li>
-          </ul>
-        </div>
+        <Col xs={12} md={6}>
+          <div className={'col-auto ' + styles.menu}>
+            <ul>
+              <li>
+                <a href='#' className={styles.active}>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href='#'>Furniture</a>
+              </li>
+              <li>
+                <a href='#'>Chair</a>
+              </li>
+              <li>
+                <a href='#'>Table</a>
+              </li>
+              <li>
+                <a href='#'>Sofa</a>
+              </li>
+              <li>
+                <a href='#'>Bedroom</a>
+              </li>
+              <li>
+                <a href='#'>Blog</a>
+              </li>
+            </ul>
+          </div>
+        </Col>
       </div>
       <div className='row align-items-center d-none d-md-flex d-lg-none'>
         <div className={'col-12 ' + styles.menu}>

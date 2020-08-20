@@ -60,7 +60,7 @@
 
 }
 
-.active{
+.active {
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid $black-color;
@@ -68,4 +68,43 @@
   font-size: 13px;
   line-height: 22px;
   background-color: $primary;
+}
+
+.gallerySlider{
+  display: inline-block;
+  width: 36px;
+  padding: 5px 10px;
+  border: 1px solid $text-color;
+  color: $text-color;
+  font-size: 13px;
+  line-height: 22px;
+  transition:all $transition-time ease;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $primary;
+    color: $primary;
+  }
+}
+
+.gallery {
+  display: inline-block;
+  padding: 10px 30px;
+  color: $white;
+  border: 1px solid $gallery-color;
+  border-radius: 5px;
+  background-color: $gallery-color;
+  font-size: 13px;
+  line-height: 22px;
+  
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.galleryArrow {
+  @extend .main;
+  padding: 20px 7px;
+  height: 60px;
+  width: 25px;
 }
