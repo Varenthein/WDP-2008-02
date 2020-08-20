@@ -67,7 +67,7 @@ const initialState = {
       image: '/images/furniture/furniture-1.jpeg',
       category: 'bed',
       price: 30,
-      stars: 2,
+      stars: 4,
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
@@ -81,7 +81,7 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 50,
-      stars: 2,
+      stars: 4,
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
@@ -106,7 +106,7 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 50,
-      stars: 2,
+      stars: 4,
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
@@ -129,10 +129,11 @@ const initialState = {
       image: '/images/furniture/furniture-6.jpeg',
       category: 'bed',
       price: 30,
-      stars: 2,
+      stars: 4,
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-7',
@@ -145,6 +146,7 @@ const initialState = {
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-8',
@@ -152,10 +154,11 @@ const initialState = {
       image: '/images/furniture/furniture-8.jpeg',
       category: 'bed',
       price: 30,
-      stars: 2,
+      stars: 5,
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-9',
@@ -174,7 +177,7 @@ const initialState = {
       image: '/images/furniture/furniture-10.jpeg',
       category: 'bed',
       price: 30,
-      stars: 2,
+      stars: 5,
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
@@ -190,6 +193,7 @@ const initialState = {
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-12',
@@ -198,7 +202,7 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 50,
-      stars: 2,
+      stars: 5,
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
@@ -213,6 +217,7 @@ const initialState = {
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-14',
@@ -220,7 +225,7 @@ const initialState = {
       image: '/images/furniture/furniture-2.jpeg',
       category: 'bed',
       price: 30,
-      stars: 2,
+      stars: 4,
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
@@ -236,6 +241,7 @@ const initialState = {
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-16',
@@ -244,7 +250,7 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 50,
-      stars: 2,
+      stars: 4,
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
@@ -260,6 +266,7 @@ const initialState = {
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-18',
@@ -268,7 +275,7 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 50,
-      stars: 2,
+      stars: 5,
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
@@ -283,6 +290,7 @@ const initialState = {
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-20',
@@ -305,6 +313,7 @@ const initialState = {
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-22',
@@ -328,6 +337,7 @@ const initialState = {
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-24',
@@ -340,11 +350,30 @@ const initialState = {
       promo: 'sale',
       hotDeals: 'HOT DEALS',
       newFurniture: true,
+      topSeller: true,
     },
   ],
   cart: {
     products: [],
   },
+  gallery: [
+    {
+      id: 'featured',
+      name: 'FEATURED',
+    },
+    {
+      id: 'topSeller',
+      name: 'TOP SELLER',
+    },
+    {
+      id: 'saleOff',
+      name: 'SALE OFF',
+    },
+    {
+      id: 'topRated',
+      name: 'TOP RATED',
+    },
+  ],
 };
 
 export default initialState;
