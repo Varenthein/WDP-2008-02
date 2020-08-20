@@ -17,7 +17,7 @@
     .heading {
       position: relative;
 
-      .title {
+      h3 {
         color: $primary;
         text-transform: uppercase;
         font-size: 20px;
@@ -60,7 +60,7 @@
             border-radius: 6px;
             background-color: #e1e1e1;
             font-size: 0;
-            margin-right: 8px;
+            margin-right: 4px;
             margin-top: 20px;
 
             &.active,
@@ -72,7 +72,11 @@
       }
     }
   }
-
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
   .sign {
     font-size: 120px;
     text-align: center;
@@ -87,8 +91,8 @@
   }
 
   .clientsData {
-    margin: 0 0 80px 460px;
-    display: inline-flex
+    display: flex;
+    justify-content: center;
   }
 
   .client_image {
@@ -108,6 +112,8 @@
   }
 
   .client_type {
+    display: flex;
+    justify-content: center;
     margin-top: 10px;
   }
 }
