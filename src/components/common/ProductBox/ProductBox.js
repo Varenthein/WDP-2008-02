@@ -22,7 +22,18 @@ class ProductBox extends React.Component {
   }
 
   render() {
-    const { name, price, promo, stars, image, oldPrice, compare } = this.props;
+    const {
+      name,
+      price,
+      promo,
+      stars,
+      image,
+      oldPrice,
+      compare,
+      id,
+      addToCompare,
+      countProductToCompare,
+    } = this.props;
     const { favorite } = this.state;
 
     return (
@@ -60,15 +71,23 @@ class ProductBox extends React.Component {
             >
               <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
             </Button>
-            <Button variant={compare ? 'active' : 'outline'}>
+            <Button
+              onClick={event => {
+                event.preventDefault();
+                if (countProductToCompare() < 4) {
+                  addToCompare(id);
+                }
+              }}
+              variant={compare ? 'active' : 'outline'}
+            >
               <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
             </Button>
           </div>
           <div className={styles.price}>
-            {oldPrice ? <div className={styles.oldPrice}>$ {oldPrice}</div> : ''}
             <Button noHover variant='small'>
               $ {price}
             </Button>
+            {oldPrice ? <div className={styles.oldPrice}>$ {oldPrice}</div> : ''}
           </div>
         </div>
       </div>
@@ -86,6 +105,9 @@ ProductBox.propTypes = {
   compare: PropTypes.bool,
   oldPrice: PropTypes.number,
   image: PropTypes.string,
+  id: PropTypes.string,
+  addToCompare: PropTypes.func,
+  countProductToCompare: PropTypes.func,
 };
 
 export default ProductBox;

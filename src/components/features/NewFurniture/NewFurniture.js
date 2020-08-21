@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Col } from 'react-flexbox-grid';
 import styles from './NewFurniture.module.scss';
-import ProductBox from '../../common/ProductBox/ProductBox';
+import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import SwipeAction from '../../common/SwipeAction/SwipeAction';
 
 class NewFurniture extends React.Component {
@@ -26,14 +26,13 @@ class NewFurniture extends React.Component {
     const categoryProducts = products.filter(item => item.category === activeCategory);
 
     let productsPerPage = 1;
-    if (deviceName == 'mobile') {
+    if (deviceName === 'mobile') {
       productsPerPage = 1;
-    } else if (deviceName == 'tablet') {
+    } else if (deviceName === 'tablet') {
       productsPerPage = 2;
-    } else if (deviceName == 'desktop') {
+    } else if (deviceName === 'desktop') {
       productsPerPage = 8;
     }
-    console.log('productsPerPage:', productsPerPage);
 
     const pagesCount = Math.ceil(categoryProducts.length / productsPerPage);
 
@@ -83,15 +82,15 @@ class NewFurniture extends React.Component {
                 </div>
               </div>
             </div>
-          </div>
-          <div className='row'>
-            {categoryProducts
-              .slice(activePage * productsPerPage, (activePage + 1) * productsPerPage)
-              .map(item => (
-                <Col sm={12} md={6} lg={3} key={item.id} className='col-3'>
-                  <ProductBox {...item} />
-                </Col>
-              ))}
+            <div className='row'>
+              {categoryProducts
+                .slice(activePage * productsPerPage, (activePage + 1) * productsPerPage)
+                .map(item => (
+                  <Col sm={12} md={6} lg={3} key={item.id} className='col-3'>
+                    <ProductBox {...item} />
+                  </Col>
+                ))}
+            </div>
           </div>
         </div>
       </SwipeAction>
