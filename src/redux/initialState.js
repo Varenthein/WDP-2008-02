@@ -20,21 +20,43 @@ const initialState = {
   ],
   brands: [
     {
+      id: 'brand-1',
+      index: 0,
       brandLogoImage: '/images/brands-logo/brand-logo-1.jpg',
     },
     {
+      id: 'brand-2',
+      index: 1,
       brandLogoImage: '/images/brands-logo/brand-logo-2.jpg',
     },
     {
+      id: 'brand-3',
+      index: 2,
       brandLogoImage: '/images/brands-logo/brand-logo-3.jpg',
     },
     {
+      id: 'brand-4',
+      index: 3,
       brandLogoImage: '/images/brands-logo/brand-logo-4.jpg',
     },
     {
+      id: 'brand-5',
+      index: 4,
       brandLogoImage: '/images/brands-logo/brand-logo-5.jpg',
     },
     {
+      id: 'brand-6',
+      index: 5,
+      brandLogoImage: '/images/brands-logo/brand-logo-6.jpg',
+    },
+    {
+      id: 'brand-7',
+      index: 6,
+      brandLogoImage: '/images/brands-logo/brand-logo-6.jpg',
+    },
+    {
+      id: 'brand-8',
+      index: 7,
       brandLogoImage: '/images/brands-logo/brand-logo-6.jpg',
     },
   ],
