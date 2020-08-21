@@ -5,7 +5,7 @@
 
 ## Opis projektu
 
-DO UZUPEŁNIENIA
+Projekt sklepu internetowego, zbudowany przy wykorzystaniu technologii React, Redux, JavaScrip, SCSS.
 
 ## Demo
 
