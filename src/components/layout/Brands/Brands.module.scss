@@ -1,0 +1,54 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: 5rem 0;
+
+  .brandsRow {
+    display: flex;
+    padding: 24px 0;
+    border-top: 1px solid $header-topbar-bg;
+    border-bottom: 1px solid $header-topbar-bg;
+    
+  }
+  
+  .brandLogoImage {
+    border: 1px solid $header-topbar-bg;
+    margin: 0 30px;
+  }
+
+  .imageWrapper {
+    width: 90%;
+    display: flex;
+    
+  }
+
+  .brandsImages{
+    display: flex;
+  }
+  
+  .arrowShadow {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 16px;
+  }
+  .arrowLeft, .arrowRight {
+    background-color: $form-border-color;
+    display: flex;
+    align-items: center;
+    &:hover {
+        background-color: $primary;
+    }
+  }
+  .arrowLeft {
+    margin-right: 15px;
+  }
+  .arrowRight {
+    margin-left: 15px;
+  }
+  .leftArrow, .rightArrow {
+    margin-left: -15px;
+    margin-right: 10px;
+  }
+}
