@@ -28,6 +28,14 @@ export const REMOVE_FROM_COMPARE = createActionName('REMOVE_FROM_COMPARE');
 export const addToCompare = payload => ({ payload, type: ADD_TO_COMPARE });
 export const removeFromCompare = payload => ({ payload, type: REMOVE_FROM_COMPARE });
 
+export const getLimitedProducts = ({ products }, limit) => products.slice(0, limit);
+
+export const sortAscByParam = ({ products }, param) =>
+  products.sort((a, b) => a[param] - b[param]);
+
+export const sortDescByParam = ({ products }, param) =>
+  products.sort((a, b) => b[param] - a[param]);
+
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
