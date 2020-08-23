@@ -117,3 +117,96 @@
     margin-top: 10px;
   }
 }
+
+@media (max-width: 360px){
+  .root {
+    .panelBar {
+      .headingEmpty{
+        width: 80px;
+      }
+      .heading {
+        margin-left: 8px;
+        .title {
+          font-size: 14px;
+        }
+      }
+    }
+    .content {
+      .clientsData{
+        margin: 0 0 40px 80px;
+      }
+      .client_nameAndType {
+        font-size: 12px;
+      }
+      .sign {
+        font-size: 60px;
+        height: 60px;
+      }
+      .opinion {
+        font-size: 12px;
+        padding: 0 30px;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 361px) and (max-width: 767px) {
+  .root {
+    .panelBar {
+      .headingEmpty{
+        width: 232px;
+      }
+      .heading {
+        margin-left: 8px;
+        .title {
+          font-size: 14px;
+        }
+      }
+    }
+    .content {
+      .clientsData{
+        margin: 0 0 40px 120px;
+      }
+      .client_nameAndType {
+        font-size: 14px;
+      }
+      .sign {
+        font-size: 60px;
+        height: 60px;
+      }
+      .opinion {
+        font-size: 14px;
+        padding: 0 30px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 991px){
+  .root {
+    .panelBar {
+      .headingEmpty{
+        width: 440px;
+      }
+      .heading {
+        margin-left: 8px;
+      }
+      .dots {
+        margin-right: 8px;
+      }
+    }
+    .content {
+      .clientsData{
+        margin: 0 0 40px 240px;
+      }
+      .sign {
+        font-size: 60px;
+        height: 60px;
+      }
+      .opinion {
+        font-size: 14px;
+        padding: 0 30px;
+      }
+    }
+  }
+}

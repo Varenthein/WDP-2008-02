@@ -5,6 +5,7 @@ import styles from './Promoted.module.scss';
 import PromotedProductBox from './PromotedProductBox.js';
 import Button from '../Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SwipeableViews from 'react-swipeable-views';
 import {
   faArrowAltCircleRight,
   faArrowAltCircleLeft,
@@ -16,10 +17,34 @@ class Promoted extends React.Component {
     activeCategory: 'bed',
   };
 
+  handlePageChange(newPage) {
+    this.setState({ activePage: newPage });
+  }
+
   render() {
     const { products } = this.props;
-    const { activeCategory } = this.state;
+    const { activeCategory, activePage } = this.state;
     const categoryProducts = products.filter(item => item.category === activeCategory);
+    const hotDealsProducts = categoryProducts.filter(
+      item => item.hotDeals === 'HOT DEALS'
+    );
+    const saleProducts = categoryProducts.filter(item => item.promo === 'sale');
+
+    const productCount = saleProducts.length;
+
+    const swipeRight = () => {
+      if (activePage + 1 < productCount) {
+        this.handlePageChange(activePage + 1);
+      }
+    };
+
+    const swipeLeft = () => {
+      if (activePage > 0) {
+        console.log(activePage);
+        console.log(productCount);
+        this.handlePageChange(activePage - 1);
+      }
+    };
 
     return (
       <div className={styles.root}>
@@ -32,42 +57,50 @@ class Promoted extends React.Component {
               key={categoryProducts[0].id}
               className='d-none d-md-block'
             >
-              <PromotedProductBox {...categoryProducts[0]} />
+              <PromotedProductBox products={hotDealsProducts} />
             </Col>
-            <Col xs={12} md={6} lg={8} className={styles.rightSide}>
-              <div className={styles.rightSidePhoto}>
-                <img src='images/furniture/furniture-6.jpeg' alt='promotedExample' />
-                <div className={styles.rightSideStripe}>
-                  <div className={styles.rightSideStripeTextBig}>
-                    INDOOR <b>FURNITURE</b>
+            {saleProducts.slice(activePage, activePage + 1).map(product => (
+              <Col
+                key={product.name}
+                xs={12}
+                md={6}
+                lg={8}
+                className={styles.rightSide}
+              >
+                <div className={styles.rightSidePhoto}>
+                  <img src={product.image} alt='promotedExample' />
+                  <div className={styles.rightSideStripe}>
+                    <div className={styles.rightSideStripeTextBig}>
+                      INDOOR <b>FURNITURE</b>
+                    </div>
+                    <div className={styles.rightSideStripeTextSmall}>
+                      SAVE UP TO 50% OF ALL FURNITURE
+                    </div>
                   </div>
-                  <div className={styles.rightSideStripeTextSmall}>
-                    SAVE UP TO 50% OF ALL FURNITURE
-                  </div>
                 </div>
-              </div>
-              <div className={styles.buttonShop}>
-                <Button className={styles.buttonShopNow} variant='outline'>
-                  SHOP NOW
-                </Button>
-              </div>
-              <div className={styles.arrows}>
-                <div className={styles.arrow}>
-                  <div className={styles.arrowShadow}></div>
-                  <FontAwesomeIcon
-                    icon={faArrowAltCircleLeft}
-                    className={styles.leftArrow}
-                  ></FontAwesomeIcon>
+                <div className={styles.buttonShop}>
+                  <Button className={styles.buttonShopNow} variant='outline'>
+                    SHOP NOW
+                  </Button>
                 </div>
-                <div className={styles.arrow}>
-                  <div className={styles.arrowShadow}></div>
-                  <FontAwesomeIcon
-                    icon={faArrowAltCircleRight}
-                    className={styles.rightArrow}
-                  ></FontAwesomeIcon>
+                <div className={styles.arrows}>
+                  <button className={styles.arrow} onClick={() => swipeLeft()}>
+                    <div className={styles.arrowShadow}></div>
+                    <FontAwesomeIcon
+                      icon={faArrowAltCircleLeft}
+                      className={styles.leftArrow}
+                    ></FontAwesomeIcon>
+                  </button>
+                  <button className={styles.arrow} onClick={() => swipeRight()}>
+                    <div className={styles.arrowShadow}></div>
+                    <FontAwesomeIcon
+                      icon={faArrowAltCircleRight}
+                      className={styles.rightArrow}
+                    ></FontAwesomeIcon>
+                  </button>
                 </div>
-              </div>
-            </Col>
+              </Col>
+            ))}
           </div>
         </div>
       </div>
