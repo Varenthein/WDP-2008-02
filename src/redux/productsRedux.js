@@ -18,8 +18,6 @@ export const getCountProductToCompare = ({ products }) => {
 const reducerName = 'products';
 const createActionName = name => `app/${reducerName}/${name}`;
 
-export const getGallery = ({ gallery }) => gallery;
-
 /* action type */
 export const ADD_TO_COMPARE = createActionName('ADD_TO_COMPARE');
 export const REMOVE_FROM_COMPARE = createActionName('REMOVE_FROM_COMPARE');
