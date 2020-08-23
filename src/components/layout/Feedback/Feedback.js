@@ -8,6 +8,10 @@ class Feedback extends React.Component {
     activePage: 0,
   };
 
+  handlePageChange(newPage) {
+    this.setState({ activePage: newPage, manualPageChange: true });
+  }
+
   handleRightAction = () => {
     const { activePage, manualPageChange } = this.state;
     if (manualPageChange) {
