@@ -8,6 +8,7 @@
     padding: 24px 0;
     border-top: 1px solid $header-topbar-bg;
     border-bottom: 1px solid $header-topbar-bg;
+    justify-content: space-between;
     
   }
   
@@ -50,5 +51,47 @@
   .leftArrow, .rightArrow {
     margin-left: -15px;
     margin-right: 10px;
+  }
+}
+
+@media (max-width: $smobile) {
+  .root {
+    .imageWrapper {
+      max-width: 62%;
+    }
+  }
+}
+@media (min-width: $mobile) {
+  .root {
+    .imageWrapper {
+      max-width: 68%;
+    }
+
+    .brandLogoImage {
+      margin: 0 52px;
+    }
+  }
+  
+}
+@media (min-width: $lmobile) {
+  .root {
+    .imageWrapper {
+      max-width: 72%;
+    }
+
+    .brandLogoImage {
+      margin: 0 13px;
+    }
+  }
+  
+}
+@media (min-width: $laptop) {
+  .root {
+    .imageWrapper {
+      max-width: 90%;
+    }
+    .brandLogoImage {
+      margin: 0 30px;
+    }
   }
 }
