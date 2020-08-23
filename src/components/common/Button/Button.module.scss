@@ -13,17 +13,9 @@
   transition:all $transition-time ease;
 
   &:not(.noHover):hover {
-    color: $white-color !important;
-    background-color: $primary;
-    text-decoration: none;
-  }
-
-  &:hover {
-    -webkit-transform: rotateZ(-30deg);
-    -ms-transform: rotateZ(-30deg);
-    transform: rotateZ(-30deg);
     background-color: $primary;
     color: $black-color;
+    text-decoration: none;
   }
 }
 
@@ -46,14 +38,6 @@
   transition:all $transition-time ease;
 
   &:not(.noHover):hover {
-    background-color: $black-color;
-    color: $white-color;
-  }
-
-  &:hover {
-    -webkit-transform: rotateZ(-30deg);
-    -ms-transform: rotateZ(-30deg);
-    transform: rotateZ(-30deg);
     background-color: $primary;
     color: $black-color;
   }

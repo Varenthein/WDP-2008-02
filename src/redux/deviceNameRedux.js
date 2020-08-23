@@ -16,7 +16,9 @@ export default function reducer(statePart = [], action = {}) {
       console.log('oldStatePart', statePart);
 
       let screenMode = '';
-      if (action.payload < 768) {
+      if (action.payload < 375) {
+        screenMode = 'smobile';
+      } else if (action.payload < 768) {
         screenMode = 'mobile';
       } else if (action.payload < 992) {
         screenMode = 'tablet';

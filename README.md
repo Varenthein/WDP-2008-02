@@ -5,7 +5,7 @@
 
 ## Opis projektu
 
-DO UZUPEŁNIENIA
+Projekt sklepu internetowego, zbudowany przy wykorzystaniu technologii React, Redux, JavaScrip, SCSS.
 
 ## Demo
 
@@ -38,4 +38,16 @@ dla plików, które zostały wybrane za pomocą `git add` i mają być zapisane 
 
 ## Konwencje i dobre praktyki
 
-DO UZUPEŁNIENIA
+1. Codzinnie każdy wysyła na koniec dnia DAILY.
+2. Każdy samodzielnie przypisuje sobie zadania w Jirze.
+3. Należy zwracć uwagę na kolejność zadań w backlogu. Wybieramy jedno z 3-5 z samej góry.
+4. Nowy branch utwórz z aktualnego mastera. Nazwij branch numerem taska np. WDP200802-1.
+5. Nazwy commitów wpisuj po angielsku - nazwa powinna odnosić się do wprowadzonej zmiany.
+6. Zakładając pull request, w tytule należy podać numer zadania z Jiry. W opisie podaj krótki opis problemu.
+
+Struktura katalogów projektu:
+
+	- src - główny katalog
+		- components - katalog ze wszystkimi komponentami, podzielony na cztery podkategorie (common, features, layout, views),
+		- redux - katalog z plikami związanymi z obsługą magazynu (Reduxa),
+		- styles - katalog z plikami styli,

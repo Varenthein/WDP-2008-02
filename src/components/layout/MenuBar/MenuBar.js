@@ -21,27 +21,27 @@ const MenuBar = ({ children }) => (
           <div className={'col-auto ' + styles.menu}>
             <ul>
               <li>
-                <a href='#' className={styles.active}>
+                <a href='/home' className={styles.active}>
                   Home
                 </a>
               </li>
               <li>
-                <a href='#'>Furniture</a>
+                <a href='/furniture'>Furniture</a>
               </li>
               <li>
-                <a href='#'>Chair</a>
+                <a href='/shop/chair'>Chair</a>
               </li>
               <li>
-                <a href='#'>Table</a>
+                <a href='/shop/table'>Table</a>
               </li>
               <li>
-                <a href='#'>Sofa</a>
+                <a href='/shop/sofa'>Sofa</a>
               </li>
               <li>
-                <a href='#'>Bedroom</a>
+                <a href='/bedroom'>Bedroom</a>
               </li>
               <li>
-                <a href='#'>Blog</a>
+                <a href='/blog'>Blog</a>
               </li>
             </ul>
           </div>
@@ -51,27 +51,27 @@ const MenuBar = ({ children }) => (
         <div className={'col-12 ' + styles.menu}>
           <ul>
             <li>
-              <a href='#' className={styles.active}>
+              <a href='/home' className={styles.active}>
                 Home
               </a>
             </li>
             <li>
-              <a href='#'>Furniture</a>
+              <a href='/furniture'>Furniture</a>
             </li>
             <li>
-              <a href='#'>Chair</a>
+              <a href='/shop/chair'>Chair</a>
             </li>
             <li>
-              <a href='#'>Table</a>
+              <a href='/shop/table'>Table</a>
             </li>
             <li>
-              <a href='#'>Sofa</a>
+              <a href='/shop/sofa'>Sofa</a>
             </li>
             <li>
-              <a href='#'>Bedroom</a>
+              <a href='/bedroom'>Bedroom</a>
             </li>
             <li>
-              <a href='#'>Blog</a>
+              <a href='/blog'>Blog</a>
             </li>
           </ul>
         </div>
@@ -89,12 +89,13 @@ const MenuBar = ({ children }) => (
             className='navbar-toggler'
             title=''
           >
-            <Dropdown.Item href='#'>Furniture</Dropdown.Item>
-            <Dropdown.Item href='#'>Chair</Dropdown.Item>
-            <Dropdown.Item href='#'>Table</Dropdown.Item>
-            <Dropdown.Item href='#'>Sofa</Dropdown.Item>
-            <Dropdown.Item href='#'>Bedroom</Dropdown.Item>
-            <Dropdown.Item href='#'>Blog</Dropdown.Item>
+            <Dropdown.Item href='/home'>Home</Dropdown.Item>
+            <Dropdown.Item href='/furniture'>Furniture</Dropdown.Item>
+            <Dropdown.Item href='/shop/chair'>Chair</Dropdown.Item>
+            <Dropdown.Item href='/shop/table'>Table</Dropdown.Item>
+            <Dropdown.Item href='/shop/sofa'>Sofa</Dropdown.Item>
+            <Dropdown.Item href='/bedroom'>Bedroom</Dropdown.Item>
+            <Dropdown.Item href='/blog'>Blog</Dropdown.Item>
           </DropdownButton>
         </div>
       </div>
