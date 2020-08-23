@@ -49,10 +49,7 @@ class Brands extends React.Component {
         : 6;
 
     const pageCount = Math.ceil(brands.length / productsPerPage);
-    console.log(pageCount);
-    console.log(productsPerPage);
     const pages = [];
-    console.log(pages);
     for (let i = 0; i < pageCount; i++) {
       pages.push(
         <div key={i} className={styles.brandsImages}>
@@ -77,6 +74,7 @@ class Brands extends React.Component {
         this.handlePageChange(activePage + 1);
       }
     };
+
     return (
       <div className={styles.root}>
         <div className='container'>

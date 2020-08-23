@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './GallerySlider.module.scss';
-import SliderCard from './SliderCard';
+import GallerySliderCard from './GallerySliderCard';
 import { useTransition, animated } from 'react-spring';
 
-const GallerySlider = ({ galleryCategory }) => {
+const GallerySlider = ({ galleryCategory, device }) => {
   const [index, setIndex] = useState(0);
 
   const transition = useTransition(galleryCategory[index], galleryCategory[index].id, {
@@ -40,7 +40,7 @@ const GallerySlider = ({ galleryCategory }) => {
               opacity: props.o.interpolate([0, 0.5, 1, 1.5, 2], [0, 0, 1, 0, 0]),
             }}
           >
-            <SliderCard category={item} />
+            <GallerySliderCard category={item} deviceName={device} />
           </animated.div>
         ))}
       </div>
@@ -51,6 +51,7 @@ const GallerySlider = ({ galleryCategory }) => {
 GallerySlider.propTypes = {
   galleryCategory: PropTypes.array,
   o: PropTypes.number,
+  device: PropTypes.string,
 };
 
 export default GallerySlider;
