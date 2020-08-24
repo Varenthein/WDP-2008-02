@@ -9,12 +9,33 @@ const initialState = {
   ],
   feedbacks: [
     {
+      id: 0,
       title: 'Client feedback',
       sign: '"',
       opinion:
         'Some text here Some text here  Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here Some text here',
       client_image: '/images/john-smith.jpg',
       client_name: 'John Smith',
+      client_type: 'Furniture client',
+    },
+    {
+      id: 1,
+      title: 'Client feedback',
+      sign: '"',
+      opinion:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pellentesque nibh ipsum, vitae hendrerit mi bibendum vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos',
+      client_image: '/images/jody-smith.jpeg',
+      client_name: 'Jody Smith',
+      client_type: 'Furniture client',
+    },
+    {
+      id: 2,
+      title: 'Client feedback',
+      sign: '"',
+      opinion:
+        'Vestibulum pulvinar, diam nec finibus commodo, ex nulla fermentum arcu, id accumsan augue ipsum nec elit. Mauris vitae feugiat nulla. Vivamus sagittis dignissim ligula nec ornare. Proin id interdum ipsum.',
+      client_image: '/images/jim-doe.jpeg',
+      client_name: 'Jim Doe',
       client_type: 'Furniture client',
     },
   ],
