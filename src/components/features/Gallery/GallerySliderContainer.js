@@ -1,12 +1,22 @@
 import { connect } from 'react-redux';
 
 import GallerySlider from './GallerySlider';
-
-import { getAll, getGallery } from '../../../redux/productsRedux.js';
+import {
+  getSaleOff,
+  getTopRated,
+  getTopSeller,
+  getFeatured,
+} from '../../../redux/galleryRedux.js';
+import { getDeviceName } from '../../../redux/deviceNameRedux.js';
 
 const mapStateToProps = state => ({
-  products: getAll(state),
-  gallery: getGallery(state),
+  galleryCategory: [
+    getFeatured(state),
+    getTopSeller(state),
+    getSaleOff(state),
+    getTopRated(state),
+  ],
+  device: getDeviceName(state),
 });
 
 export default connect(mapStateToProps)(GallerySlider);

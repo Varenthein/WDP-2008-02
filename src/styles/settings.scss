@@ -10,6 +10,7 @@ $black: #292929;
 $white: #fff;
 $green: #2ed573;
 $lightGrey: #e1e1e1;
+$blackTransparent: rgba(0, 0, 0, 0.5);
 
 /* THESE VARIABLES CAN BE USED IN THE PROJECT. */
 
@@ -35,4 +36,5 @@ $gallery-color: $green;
 
 $gallery-border-color: $lightGrey;
 $gallery-bg-active: $lightGrey;
+$bg-black-transparent: $blackTransparent;
 

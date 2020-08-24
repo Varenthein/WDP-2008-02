@@ -12,9 +12,6 @@ export const addWindowWidth = payload => ({ payload, type: ADD_WINDOW_WIDTH });
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case ADD_WINDOW_WIDTH: {
-      console.log('action.payload', action.payload);
-      console.log('oldStatePart', statePart);
-
       let screenMode = '';
       if (action.payload < 375) {
         screenMode = 'smobile';
@@ -25,7 +22,6 @@ export default function reducer(statePart = [], action = {}) {
       } else {
         screenMode = 'desktop';
       }
-      console.log('newStatePart', screenMode);
       return screenMode;
     }
     default:
