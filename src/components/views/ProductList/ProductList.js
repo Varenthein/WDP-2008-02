@@ -19,6 +19,31 @@ const ProductList = () => (
           <a href='#'>Furniture</a>
         </div>
       </div>
+      <div className={styles.formWrapper}>
+        <div className={'col-auto' + styles.sort}>
+          <form>
+            <label className={styles.sortLabel} htmlFor='sortBy'>
+              Sort By
+            </label>
+            <select id='sortBy'>
+              <option value='lowestPrice'>Price: Lowest first</option>
+              <option value='lowestPrice'>Price: Highest first</option>
+            </select>
+          </form>
+        </div>
+        <div className={'col-auto' + styles.show}>
+          <form>
+            <label className={styles.showLabel} htmlFor='show'>
+              Show
+            </label>
+            <select id='show'>
+              <option value='14'>14</option>
+              <option value='8'>8</option>
+              <option value='4'>4</option>
+            </select>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 );
