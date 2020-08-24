@@ -8,6 +8,11 @@ import { useTransition, animated } from 'react-spring';
 const GallerySlider = ({ galleryCategory, device }) => {
   const [index, setIndex] = useState(0);
 
+  const activeCategoryIndex = category => {
+    const index = galleryCategory.indexOf(category);
+    return index;
+  };
+
   const transition = useTransition(galleryCategory[index], galleryCategory[index].id, {
     from: { o: 0 },
     enter: { o: 1 },
@@ -23,10 +28,10 @@ const GallerySlider = ({ galleryCategory, device }) => {
           {galleryCategory.map(item => (
             <li key={item.id}>
               <a
-                className={galleryCategory.indexOf(item) === index && styles.active}
+                className={activeCategoryIndex(item) === index && styles.active}
                 onClick={() => setIndex(galleryCategory.indexOf(item))}
               >
-                {item.name}
+                <span>{item.name}</span>
               </a>
             </li>
           ))}

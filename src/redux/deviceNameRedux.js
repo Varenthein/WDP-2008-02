@@ -19,6 +19,8 @@ export default function reducer(statePart = [], action = {}) {
         screenMode = 'mobile';
       } else if (action.payload < 992) {
         screenMode = 'tablet';
+      } else if (action.payload < 1024) {
+        screenMode = 'laptop';
       } else {
         screenMode = 'desktop';
       }
