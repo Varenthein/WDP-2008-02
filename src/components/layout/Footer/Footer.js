@@ -103,7 +103,7 @@ const Footer = ({ children }) => (
           <div className='col-sm-3 col-md-12 col-lg-3 text-center align-items-center'></div>
           <div className={'col text-center ' + styles.copyright}>
             <p className='text-sm-center text-md-left text-lg-center'>
-              ©Copyright 2016 Bazar | All Rights Reserved
+              ©Copyright 2020 Bazar | All Rights Reserved
             </p>
           </div>
           <div className={'col text-right ' + styles.socialMedia}>
