@@ -3,14 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Footer.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faTwitter,
-  faFacebookF,
-  faYoutube,
-  faGooglePlusG,
-  faLinkedinIn,
-  faPinterestP,
-} from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faFacebookF, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = ({ children }) => (
   <footer className={styles.root}>
@@ -121,21 +114,6 @@ const Footer = ({ children }) => (
               <li>
                 <a href='#'>
                   <FontAwesomeIcon icon={faYoutube}>YouTube</FontAwesomeIcon>
-                </a>
-              </li>
-              <li>
-                <a href='#'>
-                  <FontAwesomeIcon icon={faGooglePlusG}>Google Plus</FontAwesomeIcon>
-                </a>
-              </li>
-              <li>
-                <a href='#'>
-                  <FontAwesomeIcon icon={faLinkedinIn}>LinkedIn</FontAwesomeIcon>
-                </a>
-              </li>
-              <li>
-                <a href='#'>
-                  <FontAwesomeIcon icon={faPinterestP}>Pinterest</FontAwesomeIcon>
                 </a>
               </li>
             </ul>
