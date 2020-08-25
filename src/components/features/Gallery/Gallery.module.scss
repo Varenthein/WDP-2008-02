@@ -3,6 +3,13 @@
 
 .root {
   background-color: $primary-background-color;
+  position: relative;
+  height: 600px;
+
+  .mobileColumn {
+    display: flex;
+    flex-direction: column;
+  }
 
   .imageWrapper {
     position: relative;
@@ -54,5 +61,11 @@
         letter-spacing: 2px;
       }
     }
+  }
+  .mobileLeftImage {
+    display: none;
+  }
+  .mobileRightSlider {
+    position: relative;
   }
 }

@@ -12,6 +12,7 @@ import { faStar as farStar, faHeart, faEye } from '@fortawesome/free-regular-svg
 import Button from '../../common/Button/Button';
 import styles from './GallerySliderCard.module.scss';
 import { useTransition, animated } from 'react-spring';
+import SwipeAction from '../../common/SwipeAction/SwipeAction';
 
 const GallerySliderCard = ({ category, deviceName }) => {
   const [index, setIndex] = useState(0);
@@ -20,14 +21,20 @@ const GallerySliderCard = ({ category, deviceName }) => {
   const products = category.products;
   const productsPerPage =
     deviceName === 'smobile'
-      ? 6
+      ? 4
       : deviceName === 'mobile'
-      ? 4
+      ? 5
       : deviceName === 'tablet'
-      ? 4
+      ? 5
+      : deviceName === 'laptop'
+      ? 5
       : 6;
 
   const pageCount = Math.ceil(products.length / productsPerPage);
+
+  const setDevice = thisDevice => {
+    return thisDevice === 'mobile' || thisDevice === 'smobile' ? true : false;
+  };
 
   const slideLeft = (page, event) => {
     event.preventDefault();
@@ -37,6 +44,10 @@ const GallerySliderCard = ({ category, deviceName }) => {
   const slideRight = (page, event) => {
     event.preventDefault();
     setPage(page === pageCount - 1 ? page : page + 1);
+  };
+
+  const handlePageChange = newPage => {
+    setPage(newPage);
   };
 
   const transition = useTransition(products[index], products[index].id, {
@@ -51,6 +62,7 @@ const GallerySliderCard = ({ category, deviceName }) => {
       <div className={styles.imageWrapper}>
         {transition.map(({ item, props, key }) => (
           <animated.div
+            className={styles.animatedWrapper}
             key={key}
             style={{
               opacity: props.o.interpolate([0, 0.5, 1, 1.5, 2], [0, 0, 1, 0, 0]),
@@ -79,28 +91,40 @@ const GallerySliderCard = ({ category, deviceName }) => {
             </div>
             <div className={styles.buttonsWrapper}>
               <div className={styles.button}>
-                <Button variant='gallerySlider'>
+                <Button
+                  variant='gallerySlider'
+                  onClick={event => event.preventDefault()}
+                >
                   <FontAwesomeIcon icon={faHeart} className={styles.icon} />
                 </Button>
-                <span>Add To Favorite</span>
+                {setDevice(deviceName) ? null : <span>Add To Favorite</span>}
               </div>
               <div className={styles.button}>
-                <Button variant='gallerySlider'>
+                <Button
+                  variant='gallerySlider'
+                  onClick={event => event.preventDefault()}
+                >
                   <FontAwesomeIcon icon={faExchangeAlt} />
                 </Button>
-                <span className={styles.description}>Add To Compare</span>
+                {setDevice(deviceName) ? null : <span>Add To Compare</span>}
               </div>
               <div className={styles.button}>
-                <Button variant='gallerySlider'>
+                <Button
+                  variant='gallerySlider'
+                  onClick={event => event.preventDefault()}
+                >
                   <FontAwesomeIcon icon={faEye} />
                 </Button>
-                <span className={styles.description}>Enlarge</span>
+                {setDevice(deviceName) ? null : <span>Enlarge</span>}
               </div>
               <div className={styles.button}>
-                <Button variant='gallerySlider'>
+                <Button
+                  variant='gallerySlider'
+                  onClick={event => event.preventDefault()}
+                >
                   <FontAwesomeIcon icon={faShoppingBasket} />
                 </Button>
-                <span>Add To Cart</span>
+                {setDevice(deviceName) ? null : <span>Add To Cart</span>}
               </div>
             </div>
           </animated.div>
@@ -108,25 +132,43 @@ const GallerySliderCard = ({ category, deviceName }) => {
       </div>
 
       <div className={styles.slider}>
-        <Button variant='galleryArrow' onClick={event => slideLeft(page, event)}>
+        <Button
+          variant='galleryArrow'
+          className={styles.buttonArrow}
+          onClick={event => slideLeft(page, event)}
+        >
           <FontAwesomeIcon icon={faChevronLeft} />
         </Button>
-        <div className={styles.sliderImageWrapper}>
-          {products.slice(page * 6, (page + 1) * 6).map(item => (
-            <a
-              className={
-                item.id === products[index].id
-                  ? styles.activeImage
-                  : styles.inActiveImage
-              }
-              key={item.id}
-              onClick={() => setIndex(products.indexOf(item))}
-            >
-              <img src={item.image} alt='coming soon' />
-            </a>
-          ))}
+        <div className={styles.swipeWrapper}>
+          <SwipeAction
+            itemsCount={pageCount}
+            activeItem={page}
+            swipeAction={handlePageChange.bind(this)}
+          >
+            <div className={styles.sliderImageWrapper}>
+              {products
+                .slice(page * productsPerPage, (page + 1) * productsPerPage)
+                .map(item => (
+                  <a
+                    className={
+                      item.id === products[index].id
+                        ? styles.activeImage
+                        : styles.inActiveImage
+                    }
+                    key={item.id}
+                    onClick={() => setIndex(products.indexOf(item))}
+                  >
+                    <img src={item.image} alt='coming soon' />
+                  </a>
+                ))}
+            </div>
+          </SwipeAction>
         </div>
-        <Button variant='galleryArrow' onClick={event => slideRight(page, event)}>
+        <Button
+          variant='galleryArrow'
+          className={styles.buttonArrow}
+          onClick={event => slideRight(page, event)}
+        >
           <FontAwesomeIcon icon={faChevronRight} />
         </Button>
       </div>

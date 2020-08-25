@@ -5,17 +5,26 @@ import styles from './Gallery.module.scss';
 import GallerySlider from './GallerySliderContainer';
 import Button from '../../common/Button/Button';
 
-const Gallery = ({ products }) => {
+const Gallery = ({ products, device }) => {
   const imageContent = products[0];
+
+  const setDevice = thisDevice => {
+    return thisDevice === 'mobile' || thisDevice === 'smobile' ? true : false;
+  };
 
   return (
     <div className={styles.root}>
       <div className='container'>
-        <div className='row'>
-          <Col xs={12} lg={6}>
+        <div className={setDevice(device) ? styles.mobileColumn : 'row'}>
+          <Col xs={12} sm={6} md={6} lg={6} className={styles.mobileRightSlider}>
             <GallerySlider />
           </Col>
-          <Col xs={12} lg={6}>
+          <Col
+            sm={6}
+            md={6}
+            lg={6}
+            className={setDevice(device) ? styles.mobileLeftImage : null}
+          >
             <div className={styles.imageWrapper}>
               <img
                 className={styles.image}
@@ -43,6 +52,7 @@ const Gallery = ({ products }) => {
 Gallery.propTypes = {
   products: PropTypes.array,
   saleOff: PropTypes.object,
+  device: PropTypes.string,
 };
 
 export default Gallery;
