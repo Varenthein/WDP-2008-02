@@ -43,7 +43,7 @@ const FeatureBoxes = () => (
           <a className='col'>
             <FeatureBox icon={faBullhorn}>
               <h5>Member discount</h5>
-              <p>First order</p>
+              <p>-5% for every order</p>
             </FeatureBox>
           </a>
         </Col>
