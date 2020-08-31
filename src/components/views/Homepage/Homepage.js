@@ -10,6 +10,7 @@ import Brands from '../../layout/Brands/BrandsContainer';
 import Promoted from '../../common/Promoted/PromotedContainer';
 import Gallery from '../../features/Gallery/GalleryContainer';
 import ProductCompare from '../../features/ProductCompare/ProductCompareContainer';
+import CookieConsent from 'react-cookie-consent';
 
 const Homepage = () => (
   <div className={styles.root}>
@@ -20,6 +21,9 @@ const Homepage = () => (
     <ProductCompare />
     <Brands />
     <Feedback />
+    <CookieConsent>
+      This website uses cookies to enhance the user experience.
+    </CookieConsent>
   </div>
 );
 
